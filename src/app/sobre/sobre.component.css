@@ -1,0 +1,8 @@
+.icones-social {
+  font-size: 1.6rem;
+  color: blueviolet !important;
+}
+
+.icones-social:hover {
+  color: rgba(137, 43, 226, 0.383) !important;
+}
