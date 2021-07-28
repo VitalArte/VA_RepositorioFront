@@ -6,3 +6,16 @@
 .icones-social:hover {
   color: rgba(137, 43, 226, 0.383) !important;
 }
+
+.legenda {
+  font-size: 0.7rem;
+}
+
+.legenda a {
+  color: black;
+}
+
+.fundo-barra {
+  background: linear-gradient(to right, #8836ff 0%, #1e88e9 70%, #1ee990 100%);
+background: gradient;
+}
