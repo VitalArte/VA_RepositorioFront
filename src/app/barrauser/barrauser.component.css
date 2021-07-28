@@ -1,0 +1,25 @@
+.container {
+  max-width: 1200px;
+
+  text-align: center;
+
+  display: inline;
+}
+
+.sidenav {
+  width: 250px;
+
+  height: 600px;
+
+  background-color:powderblue;
+
+  border-radius: 20px;
+}
+
+.editar {
+  float: right;
+  margin: 20px;
+}
+.fs-16 {
+  font-size: 16pt;
+}
