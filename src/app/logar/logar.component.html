@@ -1,0 +1,21 @@
+
+
+<div class="container">
+  <h1>Iniciar sessão</h1>
+  <form>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input [(ngModel)]='usuarioLogin.email' name='email' type="email" class="form-control" id="email" aria-describedby="email">
+
+    </div>
+    <div class="mb-3">
+      <label for="senha" class="form-label">Senha</label>
+      <input [(ngModel)]='usuarioLogin.senha' name='senha' type="password" class="form-control" id="senha">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)='logar()'>Entrar</button>
+  </form>
+  <p class="text-center">Não tem uma conta? <a routerLink="/cadastrar">Cadastre-se</a></p>
+</div>
+
+
