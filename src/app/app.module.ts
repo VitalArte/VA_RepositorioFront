@@ -12,6 +12,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LogarComponent } from './logar/logar.component';
 import { FormsModule } from '@angular/forms';
 import { FeedComponent } from './feed/feed.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FeedComponent } from './feed/feed.component';
     BarrauserComponent,
     CadastrarComponent,
     LogarComponent,
-    FeedComponent
+    FeedComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,

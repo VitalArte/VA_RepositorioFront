@@ -3,7 +3,7 @@ export const environment = {
   token: '',
   nome: '',
   id: 0,
-  foto:'',
+  foto:'https://voxnews.com.br/wp-content/uploads/2017/04/unnamed.png',
   email:'',
   tipoConta: '',
   biografia: ''
