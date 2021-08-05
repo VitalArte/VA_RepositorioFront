@@ -28,6 +28,8 @@ export class TemaComponent implements OnInit {
   //    this.router.navigate(['/logar'])
   //  }
 
+    this.getAllTemas()
+
   }
 
 
