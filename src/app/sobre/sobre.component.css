@@ -15,8 +15,8 @@
   color: black;
 }
 
-.fundo-barra {
-  background: linear-gradient(to right, #8836ff 0%, #1e88e9 70%, #1ee990 100%);
+.fundo {
+  background: linear-gradient(135deg, #3911c1 0%,  #8836ff 20%, #1e88e9 40%, #1ee990 60%, #fcf647 100%);
 background: gradient;
 }
 

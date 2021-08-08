@@ -50,6 +50,7 @@ export class SobreComponent implements OnInit {
   toggle() {
     this.estaAberto = !this.estaAberto
   }
+  //-Todos estão abrindo de uma vez só, ver se eu consigo ajeitar essa animação ou se vai ser na base de criar uma animação pra cada um.
 
   transicao() {
     while (!this.estaAberto) {
