@@ -24,23 +24,6 @@ background: gradient;
   font-size: 0.9rem;
 }
 
-/* .cartao:hover{
- animation: fundo-card 2s alternate;
-  border: 5px solid #1ee990;
-  transition: all 1s ease-out;
-}
-
-@keyframes fundo-card{
-
-  0% {
-    background-position: 0;
-  }
-
-  100% {
-    background-position: -15px -15px;
-  }
-} */
-
 .wrap-image {
   position: relative;
 }
@@ -51,6 +34,9 @@ background: gradient;
   position: absolute;
   z-index: -1;
   transition: all 0.25s ease-out;
+  background-color: #1ee990;
+  top: 0;
+  left: 0;
 }
 
 .wrap-image::after{
@@ -61,21 +47,24 @@ background: gradient;
   z-index: -1;
   border: 2px solid #1e88e9;
   transition: all 0.25s ease-out;
-}
-.wrap-image::before {
-  background-color: #1ee990;
-  top: 0;
-  left: 0;
-}
-.wrap-image::after {
   bottom: 0px;
   right: 0px;
 }
+
 .wrap-image:hover::before {
-  top: 8%;
-  left: 8%;
+  top: 22px;
+  left: 30px;
 }
 .wrap-image:hover::after {
-  bottom: 2.5%;
-  right: 8%;
+  bottom: 22px;
+  right: 30px;
 }
+
+/* #sobre {
+  transition: 300ms;
+} */
+
+
+/* .ativo {
+  display: block !important;
+} */
