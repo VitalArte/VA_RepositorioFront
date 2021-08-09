@@ -15,7 +15,56 @@
   color: black;
 }
 
-.fundo-barra {
-  background: linear-gradient(to right, #8836ff 0%, #1e88e9 70%, #1ee990 100%);
+.fundo {
+  background: linear-gradient(135deg, #3911c1 0%,  #8836ff 20%, #1e88e9 40%, #1ee990 60%, #fcf647 100%);
 background: gradient;
 }
+
+.cartao {
+  font-size: 0.9rem;
+}
+
+.wrap-image {
+  position: relative;
+}
+.wrap-image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.25s ease-out;
+  background-color: #1ee990;
+  top: 0;
+  left: 0;
+}
+
+.wrap-image::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  border: 2px solid #1e88e9;
+  transition: all 0.25s ease-out;
+  bottom: 0px;
+  right: 0px;
+}
+
+.wrap-image:hover::before {
+  top: 22px;
+  left: 30px;
+}
+.wrap-image:hover::after {
+  bottom: 22px;
+  right: 30px;
+}
+
+/* #sobre {
+  transition: 300ms;
+} */
+
+
+/* .ativo {
+  display: block !important;
+} */

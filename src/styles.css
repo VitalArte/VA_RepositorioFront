@@ -84,3 +84,11 @@
   object-fit: cover;
 }
 
+.fs-1-8rem {
+  font-size: 1.8rem;
+}
+
+.bg-branco-op {
+  background-color: #ffffff70;
+}
+
