@@ -12,12 +12,12 @@
             <a class="nav-link active d-flex flex-column me-4 text-white" aria-current="page" href="#"> <i class="fa fa-home icones-menu ms-2" aria-hidden="true"></i>Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link me-4 pb-0" href="#"> <img src="https://icon-library.com/images/generic-user-icon/generic-user-icon-10.jpg" alt="Ícone de projetos" width="50px" height="50px" class="img-fluid rounded-circle"></a>
+            <a class="nav-link me-4 pb-0" href="#"> <img src="{{foto}}" alt="Foto do Usuário" width="50px" height="50px" class="img-fluid rounded-circle"></a>
               <a class="nav-link dropdown-toggle me-4 py-0 text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Perfil
               </a>
             <ul class="dropdown-menu me-4" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">Visualizar perfil</a></li>
-              <li><a class="dropdown-item" href="#">Configurações da conta</a></li>
+              <li><a [routerLink]="['/editar-usuario', id]" class="dropdown-item">Configurações da conta</a></li>
             </ul>
           </li>
           <li class="nav-item">

@@ -21,6 +21,12 @@ export class TemaService {
      return this.http.get<Tema[]>('https://vitalarte.herokuapp.com/temas', this.token)
 
   }
+
+  getbyIdTema(id: number): Observable<Tema> {
+    return this.http.get<Tema>(`https://vitalarte.herokuapp.com/temas/${id}`, this.token)
+
+ }
+
   getNomeTema(nome: string): Observable<Tema[]> {
     return this.http.get<Tema[]>(`https://vitalarte.herokuapp.com/temas/nome/${nome}`, this.token)
   }
@@ -32,4 +38,11 @@ export class TemaService {
    return this.http.post<Tema>('https://vitalarte.herokuapp.com/temas', tema, this.token)
  }
 
+ putTema(tema: Tema): Observable<Tema>{
+  return this.http.put<Tema>('https://vitalarte.herokuapp.com/temas', tema, this.token)
+}
+
+deleteTema(id: number){
+  return this.http.delete(`https://vitalarte.herokuapp.com/temas/${id}`, this.token)
+}
 }
