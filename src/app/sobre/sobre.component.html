@@ -91,7 +91,7 @@
       <div class="row d-flex justify-content-center align-items-baseline">
 
         <!-- Vini Teixeira -->
-        <div (mouseover)="toggle()" (mouseout)="toggle()" class="col px-2 border mx-1 cartao bg-light">
+        <div (mouseover)="toggle()" (mouseout)="toggle()" (mouseover)="transicao()" class="col px-2 border mx-1 cartao bg-light">
           <div class="wrap-image">
             <div class="p-2">
               <div class="text-center">
@@ -101,7 +101,7 @@
               <hr class="w-75 mx-auto">
               <p class="m-0">Nome, descrição breve para deixar curioso?</p>
               <div class="text-center fs-1-8rem" [@piscar]="piscando ? 'on' : 'off'">
-                <i *ngIf='!estaAberto' class="fa fa-angle-double-down text-secondary"></i>
+                <i class="fa fa-angle-double-down text-secondary"></i>
               </div>
               <p [@mostrar]="estaAberto ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
                 amet

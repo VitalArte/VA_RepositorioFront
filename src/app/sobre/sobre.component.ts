@@ -53,10 +53,7 @@ export class SobreComponent implements OnInit {
   //-Todos estão abrindo de uma vez só, ver se eu consigo ajeitar essa animação ou se vai ser na base de criar uma animação pra cada um.
 
   transicao() {
-    while (!this.estaAberto) {
       this.piscando = !this.piscando
-
-    }
   }
 
 }
