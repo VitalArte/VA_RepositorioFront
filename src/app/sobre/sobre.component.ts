@@ -76,6 +76,4 @@ export class SobreComponent implements OnInit {
     this.transicao()
   }
 
-
-
 }
