@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
+import { Usuario } from '../model/Usuario';
+import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
@@ -12,18 +15,21 @@ import { TemaService } from '../service/tema.service';
 })
 export class FeedComponent implements OnInit {
 
-  constructor(private router: Router, private postagemservice: PostagemService, private temaservice: TemaService) { }
+  constructor(private router: Router, private postagemservice: PostagemService, private temaservice: TemaService, private authservice: AuthService) { }
+
   postagem: Postagem=new Postagem()
   listaPostagem: Postagem[]
   postagemEdit: Postagem = new Postagem ()
   temaEdit: Tema = new Tema ()
   listaTema: Tema[]
   deletePostagemId: number
+  usuario: Usuario = new Usuario()
 
   ngOnInit() {
 
     this.getPostagens()
     this.getAllTemas()
+    this.getUsuarioById()
   }
 
   getPostagens(){
@@ -57,13 +63,12 @@ export class FeedComponent implements OnInit {
   }
 
   cadastrar(){
+    this.postagem.usuario = this.usuario
     this.postagemservice.postPostagens(this.postagem).subscribe((resp: Postagem)=> {
       this.postagem= resp
-
       console.log(this.postagem)
       this.postagem = new Postagem()
       this.getPostagens()
-
 
     })
 }
@@ -82,6 +87,13 @@ apagarPostagem (){
   this.postagemservice.deletePostagens(this.deletePostagemId).subscribe(()=>{
     alert ('A postagem foi apagada com sucesso.')
     this.getPostagens()
+  })
+}
+
+
+getUsuarioById(){
+  this.authservice.getUsuarioById(environment.id).subscribe((resp: Usuario) => {
+    this.usuario = resp
   })
 }
 }

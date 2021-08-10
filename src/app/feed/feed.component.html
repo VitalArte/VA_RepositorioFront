@@ -17,8 +17,8 @@
 
         <!-- ? coluna da esquerda, que contém a mensagem de boas vindas. -->
 
-          <!-- ! row que contém os botões -->
-          <!-- <div class="row d-flex justify-content-center mt-3 mb-5">
+        <!-- ! row que contém os botões -->
+        <!-- <div class="row d-flex justify-content-center mt-3 mb-5">
             <div class="col-md-6">
               <button class="btn btn-light text-btn mr-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova
                 postagem</button>
@@ -32,39 +32,33 @@
       <!-- todo Row que contém a nav de postagens -->
 
       <div class="container mb-5 mt-5" id="postagens">
-            <div *ngFor='let postagem of listaPostagem' class="card bg-light">
-              <!-- <div class="card-header">
-                <div class="row">
-                  <div class="col-md-2">
-                    <img class="rounded-circle" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">
-                  </div>
-                  <div class="col-md-4">
-                    <div class="d-flex flex-column">
-                      <p>{{postagem.usuario.nome}}</p>
-                      <p>{{postagem.data | date: 'dd/MM/yyyy'}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-
-              <div class="card-body">
-                <h5 class="card-title">{{postagem.titulo}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{postagem.usuario}}</h6>
-                <p class="card-text">{{postagem.corpo}}</p>
-                <button (click)= 'getByIdPostagens(postagem.id)' class="btn btn-info mr-3" data-bs-toggle="modal" data-bs-target="#editarPostagem" >Editar</button>
-                <!-- <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]">Apagar</button> -->
-              </div>
+        <div *ngFor='let postagem of listaPostagem' class="card bg-light">
+          <div class="card-header d-flex">
+            <div class="p-0">
+              <img class="rounded-circle img-size" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">
             </div>
+            <p class="align-self-center">{{postagem.usuario.nome}}</p>
+            <p>{{postagem.data | date: 'dd/MM/yyyy'}}</p>
+            <h5 class="ms-auto align-self-center">{{postagem.titulo}}</h5>
           </div>
-
-          <div class="tab-pane fade" id="nav-minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-            Minhas postagens
-          </div>
-
-          <div class="tab-pane fade" id="nav-postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
-            Postagens por tema
+          <div class="card-body">
+            <img class="" *ngIf='postagem.multimidia != null' src="{{postagem.multimidia}}" alt="">
+            <p class="card-text">{{postagem.corpo}}</p>
+            <button (click)='getByIdPostagens(postagem.id)' class="btn btn-info mr-3" data-bs-toggle="modal"
+              data-bs-target="#editarPostagem">Editar</button>
+            <!-- <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]">Apagar</button> -->
           </div>
         </div>
+      </div>
+
+      <div class="tab-pane fade" id="nav-minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+        Minhas postagens
+      </div>
+
+      <div class="tab-pane fade" id="nav-postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+        Postagens por tema
+      </div>
+    </div>
   </div>
 </div>
 
@@ -142,7 +136,8 @@
               <option *ngFor='let tema of listaTema' value="{{tema.id}}">{{tema.tema}}</option>
             </select>
           </div>
-          <a data-bs-toggle="modal" data-bs-target="#apagarPostagem" data-bs-dismiss="modal" class="mb-3">Deseja apagar esta postagem?</a>
+          <a data-bs-toggle="modal" data-bs-target="#apagarPostagem" data-bs-dismiss="modal" class="mb-3">Deseja apagar
+            esta postagem?</a>
         </form>
       </div>
       <div class="modal-footer">
@@ -169,8 +164,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" data-bs-dismiss="modal" class="btn btn-primary"
-          (click)='apagarPostagem()'>Apagar</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)='apagarPostagem()'>Apagar</button>
       </div>
     </div>
   </div>

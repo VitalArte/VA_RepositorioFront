@@ -1,5 +1,14 @@
 .cobrinha {
-  background-image: url('../../assets/imagens/fundocobrinha.png');
+  background-image: url('../../assets/imagens/cobrinhafundo.png');
   object-fit: cover;
 
+}
+
+.img-size {
+  height: 68px;
+  padding: 0 !important;
+}
+
+#postagens h5 {
+  font-size: 1.8rem;
 }
