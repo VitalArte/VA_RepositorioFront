@@ -20,6 +20,7 @@ export class FeedComponent implements OnInit {
   postagem: Postagem=new Postagem()
   listaPostagem: Postagem[]
   postagemEdit: Postagem = new Postagem ()
+  tema: Tema = new Tema()
   temaEdit: Tema = new Tema ()
   listaTema: Tema[]
   deletePostagemId: number
@@ -69,7 +70,6 @@ export class FeedComponent implements OnInit {
       console.log(this.postagem)
       this.postagem = new Postagem()
       this.getPostagens()
-
     })
 }
 
