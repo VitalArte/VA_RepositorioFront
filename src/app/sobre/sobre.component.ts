@@ -46,20 +46,20 @@ export class SobreComponent implements OnInit {
     this.transicao()
 
     // Barra de tecnologias
-    //Animação não funciona
-    const root = document.documentElement
-    const marqueeElementsDisplayed = 5
-    const marqueeContent = document.querySelector("marquee-content")
+    // Animação não funciona
+    // const root = document.documentElement
+    // const marqueeElementsDisplayed = 5
+    // const marqueeContent = document.querySelector("marquee-content")
 
-    root.style.setProperty("--marquee-elements", "8")
+    // root.style.setProperty("--marquee-elements", "8")
 
-    var i = 0
+    // var i = 0
 
-    for (i = 0; i < marqueeElementsDisplayed; i++) {
-      if (marqueeContent != null) {
-        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true))
-      }
-    }
+    // for (i = 0; i < marqueeElementsDisplayed; i++) {
+    //   if (marqueeContent != null) {
+    //     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true))
+    //   }
+    // }
     // Barra de tecnologias
 
 
