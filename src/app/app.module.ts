@@ -13,7 +13,8 @@ import { LogarComponent } from './logar/logar.component';
 import { FormsModule } from '@angular/forms';
 import { FeedComponent } from './feed/feed.component';
 import { TemaComponent } from './tema/tema.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditarUsuarioComponent } from './editar/editar-usuario/editar-usuario.component'
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     CadastrarComponent,
     LogarComponent,
     FeedComponent,
-    TemaComponent
+    TemaComponent,
+    EditarUsuarioComponent
   ],
   imports: [
     BrowserModule,
