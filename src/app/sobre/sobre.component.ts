@@ -19,7 +19,7 @@ import { Component, OnInit } from '@angular/core';
     ]),
 
     trigger('piscar', [
-      state('on', style ({
+      state('on', style({
         opacity: '100%'
       })),
       state('off', style({
@@ -41,9 +41,27 @@ export class SobreComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
 
-    // this.transicao()
+    this.transicao()
+
+    // Barra de tecnologias
+    //Animação não funciona
+    const root = document.documentElement
+    const marqueeElementsDisplayed = 5
+    const marqueeContent = document.querySelector("marquee-content")
+
+    root.style.setProperty("--marquee-elements", "8")
+
+    var i = 0
+
+    for (i = 0; i < marqueeElementsDisplayed; i++) {
+      if (marqueeContent != null) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true))
+      }
+    }
+    // Barra de tecnologias
+
 
   }
 
@@ -53,7 +71,11 @@ export class SobreComponent implements OnInit {
   //-Todos estão abrindo de uma vez só, ver se eu consigo ajeitar essa animação ou se vai ser na base de criar uma animação pra cada um.
 
   transicao() {
-      this.piscando = !this.piscando
+    this.piscando = !this.piscando
+
+    this.transicao()
   }
+
+
 
 }
