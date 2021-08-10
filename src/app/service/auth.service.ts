@@ -26,11 +26,11 @@ export class AuthService {
     }
 
     atualizar(usuario: Usuario):Observable<Usuario>{
-      return this.http.put<Usuario> ('https://vitalarte.herokuapp.com/usuarios/alterar', usuario, this.token)
+      return this.http.put<Usuario> ('https://vitalarte.herokuapp.com/usuarios/alterar', usuario)
     }
 
     getUsuarioById(id: number): Observable<Usuario>{
-      return this.http.get<Usuario>(`https://vitalarte.herokuapp.com/usuarios/${id}`, this.token)
+      return this.http.get<Usuario>(`https://vitalarte.herokuapp.com/usuarios/${id}`)
     }
 
 
