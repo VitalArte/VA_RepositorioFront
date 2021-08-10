@@ -1,31 +1,30 @@
-<div class="container-fluid">
+<div class="container-fluid cobrinha">
   <div class="row">
     <div class="col-3 m-0">
-      <app-barrauser></app-barrauser>
+      <div class="d-flex flex-column">
+        <div class="col-md-6">
+          <div class="container-fluid"></div>
+          <button class="btn btn-light text-btn mr-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova
+            postagem</button>
+          <a class="btn btn-outline-light" href="#postagens">Ver postagens</a>
+          <app-barrauser></app-barrauser>
+        </div>
+      </div>
 
     </div>
     <div class=" mt-2 col-8">
       <div class="row color d-flex align-items-center">
 
         <!-- ? coluna da esquerda, que contém a mensagem de boas vindas. -->
-        <div class="col-md-6">
-
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-6 text-welcome">
-              <h1 class="fs-54">Seja bem vindo(a)!</h1>
-              <h5 class="fs-18">Expresse aqui os seus pensamentos e opiniões!</h5>
-            </div>
-          </div>
 
           <!-- ! row que contém os botões -->
-          <div class="row d-flex justify-content-center mt-3 mb-5">
+          <!-- <div class="row d-flex justify-content-center mt-3 mb-5">
             <div class="col-md-6">
               <button class="btn btn-light text-btn mr-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova
                 postagem</button>
               <a class="btn btn-outline-light" href="#postagens">Ver postagens</a>
             </div>
-          </div>
-        </div>
+          </div> -->
       </div>
 
 
@@ -33,29 +32,21 @@
       <!-- todo Row que contém a nav de postagens -->
 
       <div class="container mb-5 mt-5" id="postagens">
-        <nav>
-          <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+            <div *ngFor='let postagem of listaPostagem' class="card bg-light">
+              <!-- <div class="card-header">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img class="rounded-circle" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="d-flex flex-column">
+                      <p>{{postagem.usuario.nome}}</p>
+                      <p>{{postagem.data | date: 'dd/MM/yyyy'}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
 
-            <a class="nav-item nav-link active navtext-color font-weight-bold" id="nav-todasPostagens-tab"
-              data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens"
-              aria-selected="true">Todas as
-              postagens</a>
-
-            <a class="nav-item nav-link navtext-color font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab"
-              href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
-              postagens</a>
-
-            <a class="nav-item nav-link navtext-color font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab"
-              href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por
-              tema</a>
-
-          </div>
-        </nav>
-
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="nav-todasPostagens" role="tabpanel"
-            aria-labelledby="nav-todasPostagens-tab">
-            <div *ngFor='let postagem of listaPostagem' class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">{{postagem.titulo}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{postagem.usuario}}</h6>
@@ -73,9 +64,6 @@
             Postagens por tema
           </div>
         </div>
-
-      </div>
-    </div>
   </div>
 </div>
 
