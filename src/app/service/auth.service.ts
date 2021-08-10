@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
@@ -14,12 +14,25 @@ export class AuthService {
     private http: HttpClient
   ) {}
 
+  token = {
+    headers: new HttpHeaders().set('Authorization',environment.token)
+  }
+
     cadastrar(usuario: Usuario):Observable<Usuario>{
       return this.http.post<Usuario> ('https://vitalarte.herokuapp.com/usuarios/cadastrar', usuario)
     }
     logar(usuarioLogin: UsuarioLogin):Observable<UsuarioLogin>{
       return this.http.post<UsuarioLogin> ('https://vitalarte.herokuapp.com/usuarios/logar', usuarioLogin)
     }
+
+    atualizar(usuario: Usuario):Observable<Usuario>{
+      return this.http.put<Usuario> ('https://vitalarte.herokuapp.com/usuarios/alterar', usuario)
+    }
+
+    getUsuarioById(id: number): Observable<Usuario>{
+      return this.http.get<Usuario>(`https://vitalarte.herokuapp.com/usuarios/${id}`)
+    }
+
 
     logado() {
       let ok: boolean = false

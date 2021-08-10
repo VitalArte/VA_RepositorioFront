@@ -5,8 +5,8 @@
 <div class="row color">
 <div class="col-md-12 text-color">
 
-  <a routerLink='/inicio' class="text-color text-left">
-      <i class="fa fa-angle-double-left" aria-hidden="true"></i> Início
+  <a routerLink='/feed' class="text-color text-left">
+      <i class="fa fa-angle-double-left" aria-hidden="true"></i> Voltar
   </a>
 
   <h1 class="fs-54 text-center">Temas</h1>
@@ -72,15 +72,46 @@
               <td>{{item.tema}}</td>
               <td>{{item.descricao}}</td>
               <td>{{item.palavraChave}}</td>
-              <!-- <td class="d-flex justify-content-end">
-                <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', item.id]" >Editar</button>
-                <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]">Apagar</button>
-              </td> -->
+              <td *ngIf='tipoUsuario =="admin"' class="d-flex justify-content-end">
+                <button (click)= 'getByIdTema(item.id)' class="btn btn-info mr-3" data-bs-toggle="modal" data-bs-target="#EditTema" >Editar</button>
+                <!-- <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]">Apagar</button> -->
+              </td>
             </tr>
           </tbody>
         </table>
 
   </div>
 </div>
+</div>
 
+<!-- Modal: editar tema -->
+<div class="modal fade" id="EditTema" tabindex="-1" aria-labelledby="EditTema" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="EditoTema">Edite o tema</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="tema" class="form-label">Tema</label>
+            <input [(ngModel)]='temaEdit.tema' type="text" class="form-control" id="alt-tema" aria-describedby="alt-tema" name="alt-tema">
+          </div>
+          <div class="mb-3">
+            <label for="descricao" class="form-label">Descrição do tema</label>
+            <input [(ngModel)]='temaEdit.descricao' type="text" class="form-control" id="alt-descricao" aria-describedby="alt-descricao" name="alt-descricao">
+          </div>
+          <div class="mb-3">
+            <label for="palavra-chave" class="form-label">Palavra-chave</label>
+            <input [(ngModel)]='temaEdit.palavraChave' type="text" class="form-control" id="alt-palavra-chave" aria-describedby="alt-palavra-chave" name="alt-palavra-chave">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-outline-success" (click)='atualizarTema(temaEdit.id)'>Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
 </div>

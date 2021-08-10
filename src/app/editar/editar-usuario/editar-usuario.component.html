@@ -1,0 +1,33 @@
+<h1>
+  Atualizar o perfil
+</h1>
+<form>
+  <div class="mb-3">
+      <label for="nome" class="form-label">Nome Completo</label>
+      <input [(ngModel)]='usuario.nome' name="nome" type="text" class="form-control" id="nome" aria-describedby="nome">
+    </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input [(ngModel)]='usuario.email' name="email"  type="email" class="form-control" id="email" aria-describedby="email">
+  </div>
+  <div class="mb-3">
+    <label for="senha" class="form-label">Senha</label>
+    <input (input)='confirmarSenha($event)' name="senha"  type="password" class="form-control" id="senha">
+  </div>
+  <div class="mb-3">
+      <label for="confirmeSenha" class="form-label">Confirme sua senha</label>
+      <input [(ngModel)]='usuario.senha' name="confirmeSenha"  type="password" class="form-control" id="confirmeSenha">
+    </div>
+    <div class="mb-3">
+      <label for="foto" class="form-label">Link da foto</label>
+      <input [(ngModel)]='usuario.foto' name="foto"  type="text" class="form-control" id="foto" aria-describedby="foto">
+    </div>
+    <div class="mb-3">
+      <label for="bio" class="form-label">Bio</label>
+      <textarea [(ngModel)]='usuario.biografia'  class="form-control" name="bio" id="bio" cols="50" rows="5"></textarea>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-danger" routerLink='/' >Cancelar</button>
+      <button (click)='atualizar()' type="submit" class="btn btn-success">Atualizar</button>
+    </div>
+</form>

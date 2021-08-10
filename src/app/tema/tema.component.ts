@@ -16,6 +16,8 @@ export class TemaComponent implements OnInit {
   listaTemas: Tema[]
   temasNome: Tema[]
   temasTopico: Tema[]
+  temaEdit: Tema = new Tema ()
+  tipoUsuario: string
 
   constructor(
     private temaService: TemaService ,
@@ -23,10 +25,14 @@ export class TemaComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-  //  if(environment.token=='') {
-  //    alert('Sua sessão expirou, faça login novamente')
-  //    this.router.navigate(['/logar'])
-  //  }
+  if(environment.token=='') {
+  alert('Sua sessão expirou, faça login novamente')
+  this.router.navigate(['/logar'])
+  }
+
+  this.tipoUsuario= environment.tipoConta
+
+    this.getAllTemas()
 
   }
 
@@ -36,6 +42,12 @@ export class TemaComponent implements OnInit {
        this.listaTemas = resp
      })
   }
+
+  getByIdTema(id: number) {
+    this.temaService.getbyIdTema(id).subscribe((resp: Tema)=> {
+      this.temaEdit = resp
+    })
+ }
 
   findNomeTema(nome: string){
 
@@ -64,9 +76,15 @@ export class TemaComponent implements OnInit {
 
 
     })
-
-
    }
 
-
+   atualizarTema (id: number){
+    this.getByIdTema(id)
+    this.temaService.putTema(this.temaEdit).subscribe((resp: Tema)=> {
+      this.temaEdit = resp
+      alert ('Tema alterado com sucesso.')
+      this.getAllTemas()
+      this.temaEdit = new Tema()
+    })
+    }
 }
