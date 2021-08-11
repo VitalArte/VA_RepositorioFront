@@ -1,29 +1,16 @@
 .fundo {
   display: flex;
-<<<<<<< HEAD
-  background-attachment: fixed;
-=======
   position: fixed;
->>>>>>> cadastro-login
   width: 100%;
 }
 
 .caixa {
 position: fixed;
 display: flex;
-width: 936px;
-<<<<<<< HEAD
 height: 600px;
 top: 30px;
 bottom: 78px;
 left: 200px;
-=======
-height: 552px;
-top: 56px;
-bottom: 78px;
-left: 126px;
-right: 126px;
->>>>>>> cadastro-login
 border-radius: 15px;
 background-color: #FFFFFF;
 }
@@ -32,18 +19,10 @@ background-color: #FFFFFF;
   position: fixed;
   display: flex;
   width: 350px;
-<<<<<<< HEAD
   height: 600px;
   top: 30px;
   bottom: 78px;
   left: 200px;
-=======
-  height: 552px;
-  top: 56px;
-  bottom: 78px;
-  left: 126px;
-  right: 126px;
->>>>>>> cadastro-login
   border-radius: 15px;
   background-color: #263238;
   }
@@ -58,11 +37,6 @@ background-color: #FFFFFF;
     align-self:auto;
   }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cadastro-login
   input {
     border-color: #263238;
   }
@@ -76,7 +50,6 @@ background-color: #FFFFFF;
     border-color: #263238;
   }
 
-<<<<<<< HEAD
   textarea {
     border-color: #263238;
   }
@@ -85,8 +58,6 @@ background-color: #FFFFFF;
     color:#263238;
   }
 
-=======
->>>>>>> cadastro-login
   .btn {
     width: 378px;
     color:#FFFFFF;
@@ -103,47 +74,5 @@ background-color: #FFFFFF;
     margin-top: 178px;
     color: #263238;
     background-color: #FFFFFF;
-<<<<<<< HEAD
     width: 215px;
   }
-=======
-    width: 250px;
-  }
-
-  /*
-
-  h1 {
-    margin-left: 935px;
-    margin-top: 100px;
-  }
-
-  .form {
-    position:absolute;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-  }
-
-  .form-control, .form-select {
-  width: 250px;
-  }
-
-  .form-select {
-  margin-top: 24px;
-  }
-
-  .control-group {
-    margin-left: 20px;
-  }
-
-  .grupo3 {
-    margin-top: 140px;
-    margin-right: 132px;
-  }
-
-  label {
-    margin-bottom: 5px;
-  }
-
- */
->>>>>>> cadastro-login
