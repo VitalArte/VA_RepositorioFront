@@ -15,6 +15,7 @@ import { FeedComponent } from './feed/feed.component';
 import { TemaComponent } from './tema/tema.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditarUsuarioComponent } from './editar/editar-usuario/editar-usuario.component'
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { EditarUsuarioComponent } from './editar/editar-usuario/editar-usuario.c
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

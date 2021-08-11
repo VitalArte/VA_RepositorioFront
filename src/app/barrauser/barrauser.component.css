@@ -4,16 +4,27 @@
   text-align: center;
 
   display: inline;
+
+  font-style: italic;
 }
 
 .sidenav {
-  width: 250px;
+  /* position: absolute; */
+  left: 3.82%;
+  right: 68.68%;
+  top: 23.24%;
+  bottom: 15.92%;
 
   height: 600px;
+  width: 35vh;
 
-  background-color:powderblue;
 
-  border-radius: 20px;
+
+
+  background: #263238;
+  border-radius: 47px;
+
+
 }
 
 .editar {
@@ -22,4 +33,18 @@
 }
 .fs-16 {
   font-size: 16pt;
+}
+
+a.btn-nome:hover {
+  width: 100px;
+  background:turquoise;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  text-decoration: underline;
+
 }
