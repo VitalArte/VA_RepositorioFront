@@ -3,6 +3,7 @@
   object-fit: stretch;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-origin: -5 -5;
 }
 
 .img-size-user {

@@ -1,40 +1,97 @@
-<h1>Cadastre-se</h1>
-<form>
-    <div class="mb-3">
-        <label for="nome" class="form-label">Nome Completo</label>
-        <input [(ngModel)]='usuario.nome' name="nome" type="text" class="form-control" id="nome" aria-describedby="nome">
-      </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input [(ngModel)]='usuario.email' name="email"  type="email" class="form-control" id="email" aria-describedby="email">
-    </div>
-    <div class="mb-3">
-      <label for="senha" class="form-label">Senha</label>
-      <input (input)='confirmarSenha($event)' name="senha"  type="password" class="form-control" id="senha">
-    </div>
-    <div class="mb-3">
-        <label for="confirmeSenha" class="form-label">Confirme sua senha</label>
-        <input [(ngModel)]='usuario.senha' name="confirmeSenha"  type="password" class="form-control" id="confirmeSenha">
-      </div>
-      <div class="mb-3">
-        <label for="foto" class="form-label">Link da foto</label>
-        <input [(ngModel)]='usuario.foto' name="foto"  type="text" class="form-control" id="foto" aria-describedby="foto">
-      </div>
-      <div class="mb-3">
-        <label for="bio" class="form-label">Bio</label>
-        <textarea [(ngModel)]='usuario.biografia'  class="form-control" name="bio" id="bio" cols="50" rows="5"></textarea>
-      </div>
-      <div>
-        <select (change)='tipoUsuario($event)'  for="tipoUsuario" id="tipoUsuario" class="form-select" aria-label="Default select example">
-            <option selected>Tipo da conta</option>
-            <option value="artista">Artista</option>
-            <option value="empresa">Empresa</option>
-            <option value="espectador">Espectador</option>
-            <option value="admin">Administrador</option>
-          </select>
-      </div>
-      <div>
-        <button type="submit" class="btn btn-danger" routerLink='/' >Cancelar</button>
-        <button (click)='cadastrar()' type="submit" class="btn btn-success">Enviar</button>
-      </div>
-  </form>
+<div class="fundo">
+  <img src="../../assets/imagens/cadastrofundo.svg">
+</div>
+
+<div class="container-fluid col-md-7 col-lg-6 ml-auto">
+  <div class="caixa">
+    <div class="row">
+
+      <!-- Cadastro Form -->
+
+      <div class="col-md-7 col-lg-6 ml-auto">
+        <form action="#">
+          <div class="row">
+
+            <h2 class="mb-4 mt-3 text-center">Cadastro</h2>
+
+            <!-- Nome -->
+            <div class="input-group col-lg-6 mb-4">
+              <div class="input-group-prepend">
+              </div>
+              <input [(ngModel)]='usuario.nome' id="nome" type="text" name="name" placeholder="Nome"
+                class="form-control">
+            </div>
+
+            <!-- Email -->
+            <div class="input-group col-lg-6 mb-4">
+              <div class="input-group-prepend">
+              </div>
+              <input [(ngModel)]='usuario.email' id="email" type="email" name="email" placeholder="Email"
+                class="form-control">
+            </div>
+
+            <!-- Link da Foto -->
+            <div class="input-group col-lg-12 mb-4">
+              <div class="input-group-prepend">
+              </div>
+              <input id="foto" type="text" name="foto" placeholder="Link da sua foto (Opcional)" class="form-control">
+            </div>
+
+            <!-- Biografia -->
+            <div class="input-group col-lg-12 mb-4">
+              <textarea [(ngModel)]='usuario.biografia' class="form-control" name="bio" id="bio" cols="50" rows="2"
+                placeholder="Conte mais sobre você"></textarea>
+            </div>
+
+            <!-- Tipo de Conta -->
+            <div class="input-group col-lg-12 mb-4">
+              <div class="input-group-prepend">
+              </div>
+              <select (change)='tipoUsuario($event)' for="tipoUsuario" id="tipoUsuario" name="tipoUsuario"
+                class="form-control custom-select">
+                <option selected>Tipo de Conta</option>
+                <option value="artista">Artista</option>
+                <option value="empresa">Empresa</option>
+                <option value="espect">Espectador</option>
+                <option value="admin">Administrador</option>
+              </select>
+            </div>
+
+            <!-- Senha -->
+            <div class="input-group col-lg-6 mb-4">
+              <div class="input-group-prepend">
+              </div>
+              <input (input)='confirmarSenha($event)' id="senha" type="password" name="senha" placeholder="Senha"
+                class="form-control">
+            </div>
+
+            <!-- Confirmar a sua Senha -->
+            <div class="input-group col-lg-6 mb-4">
+              <div class="input-group-prepend">
+              </div>
+              <input [(ngModel)]='usuario.senha' id="confirmeSenha" type="password" name="confirmeSenha"
+                placeholder="Confirme sua senha" class="form-control">
+            </div>
+
+            <!-- Criar conta -->
+            <div class="form-group col-lg-12 mx-auto mb-0">
+              <a (click)='cadastrar()' type="submit" class="btn btn-block py-2">
+                <span class="font-weight-bold">Criar a sua conta</span>
+              </a>
+            </div>
+
+            <div class="coluna">
+              <div class="row conectar">
+                <h1>Conecte-se</h1>
+                <h3>aaaaaaaaaaaaaaaaaaaa
+                  aaaaaaaaaaaaaaaaa
+                  aaaaaaaaaaaaaaaa
+                  aaaaaaaaaaaaa</h3>
+                <div class="col-lg-12 mx-auto mb-0">
+                  <a routerLink='/logar' type="submit" class="btn btn-block botao1 py-2" id="logar">
+                    <span class="font-weight-bold">Faça Login</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
