@@ -1,0 +1,110 @@
+.fundo {
+  display: flex;
+  position: fixed;
+  width: 100%;
+}
+
+.caixa {
+position: fixed;
+display: flex;
+width: 936px;
+height: 552px;
+top: 56px;
+bottom: 78px;
+left: 126px;
+right: 126px;
+border-radius: 15px;
+background-color: #FFFFFF;
+}
+
+.coluna {
+  position: fixed;
+  display: flex;
+  width: 350px;
+  height: 552px;
+  top: 56px;
+  bottom: 78px;
+  left: 126px;
+  right: 126px;
+  border-radius: 15px;
+  background-color: #263238;
+  }
+
+   .row {
+    width: 400px;
+    margin-top: 0px;
+    margin-left: 165px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-self:auto;
+  }
+
+  input {
+    border-color: #263238;
+  }
+
+  input::placeholder {
+    color:#263238;
+  }
+
+  select {
+    color:#263238;
+    border-color: #263238;
+  }
+
+  .btn {
+    width: 378px;
+    color:#FFFFFF;
+    background-color:#263238;
+  }
+
+  .conectar {
+  margin-top: 80px;
+  margin-left: 10px;
+  color:#FFFFFF;
+  }
+
+  #logar {
+    margin-top: 178px;
+    color: #263238;
+    background-color: #FFFFFF;
+    width: 250px;
+  }
+
+  /*
+
+  h1 {
+    margin-left: 935px;
+    margin-top: 100px;
+  }
+
+  .form {
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .form-control, .form-select {
+  width: 250px;
+  }
+
+  .form-select {
+  margin-top: 24px;
+  }
+
+  .control-group {
+    margin-left: 20px;
+  }
+
+  .grupo3 {
+    margin-top: 140px;
+    margin-right: 132px;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+ */
