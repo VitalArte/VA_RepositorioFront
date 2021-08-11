@@ -1,4 +1,11 @@
 <div class="container-fluid cobrinha">
+
+  <div class="row">
+    <form class="col-6 mt-2 ms-auto">
+      <input [(ngModel)]='descricaoTema' (keyup)='getPostagensByTema()' class="form-control w-75 mb-n3" type="search" placeholder="Pesquise por tema ou palavra-chave" aria-label="Search">
+    </form>
+  </div>
+
   <div class="row">
     <div class="col mt-5">
       <div class="botoes d-flex justify-content-center">
@@ -10,7 +17,7 @@
         <button class="btn sidenav-btn newpost text-white ms-1 me-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova  postagem</button>
       </div>
     </div>
-    <div class="mt-2 col-8">
+    <div class="col-8">
 
       <!-- todo Row que contém as postagens -->
 

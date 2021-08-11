@@ -21,11 +21,13 @@ export class FeedComponent implements OnInit {
   listaPostagem: Postagem[]
   postagemEdit: Postagem = new Postagem()
   postagemCurtir: Postagem = new Postagem()
+  deletePostagemId: number
 
   tema: Tema = new Tema()
   temaEdit: Tema = new Tema()
   listaTema: Tema[]
-  deletePostagemId: number
+  descricaoTema: string
+
 
   usuario: Usuario = new Usuario()
 
@@ -68,6 +70,17 @@ export class FeedComponent implements OnInit {
     this.postagemservice.getUsuarioIdPostagens(this.usuario.id).subscribe((resp: Postagem[]) => {
       this.listaPostagem = resp
       console.log(this.listaPostagem)
+    })
+  }
+
+  getPostagensByTema() {
+    if(this.descricaoTema == '') {
+      this.getAllTemas()
+
+    }
+
+    this.temaservice.getTopicoTema(this.descricaoTema).subscribe((resp: Tema[]) => {
+      this.listaTema = resp
     })
   }
 
