@@ -4,14 +4,18 @@
 
 .icones-menu{
     font-size: 30px;
-    color: #fcf647
+    color: #8836ff
 }
 
-.navbar-light{
-    background-color: #3911c1;
+.fundo-claro{
+    background-color: rgba(255, 255, 255, 0.438);
     
 }
 
 .btn-outline-dark{
-    background-color: #fcf647;
+    background-color: #8836ff;
+}
+
+li a {
+    color: #8836ff;
 }
