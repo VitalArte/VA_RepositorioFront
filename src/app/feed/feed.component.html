@@ -15,7 +15,7 @@
       <!-- todo Row que contém as postagens -->
 
       <div class="container mb-5 mt-5" id="postagens">
-        <div *ngFor='let postagem of listaPostagem | orderBy : key reverse' class="card bg-light my-5 arredondada">
+        <div *ngFor='let postagem of listaPostagem | orderBy : key:reverse' class="card bg-light my-5 arredondada">
           <div class="card-header d-flex py-2 arredondada-header">
             <div class="p-0">
               <img class="rounded-circle img-size-user" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">

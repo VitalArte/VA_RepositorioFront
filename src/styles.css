@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~animate.css/animate.min';
+
+
 /*Configuração do espaçamento da navbar*/
 
 @media (min-width: 992px) {
@@ -90,5 +92,9 @@
 
 .bg-branco-op {
   background-color: #ffffff70;
+}
+
+.w-80{
+  width: 90%;
 }
 
