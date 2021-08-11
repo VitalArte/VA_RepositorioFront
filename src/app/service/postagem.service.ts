@@ -23,15 +23,18 @@ export class PostagemService {
 
   getByIdPostagem(id: number): Observable<Postagem> {
     return this.http.get<Postagem>(`https://vitalarte.herokuapp.com/postagens/${id}`)
-
  }
 
   getTituloPostagens(titulo: string): Observable<Postagem[]>{
     return this.http.get<Postagem[]>(`https://vitalarte.herokuapp.com/postagens/titulo/${titulo}`)
   }
 
-  getUsuarioPostagens(nome: string): Observable<Postagem[]>{
+  getUsuarioNomePostagens(nome: string): Observable<Postagem[]>{
     return this.http.get<Postagem[]>(`https://vitalarte.herokuapp.com/postagens/usuario/${nome}`)
+  }
+
+  getUsuarioIdPostagens(id: number): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://vitalarte.herokuapp.com/postagens/usuario/id/${id}`)
   }
 
   postPostagens(postagem: Postagem): Observable<Postagem>{
@@ -41,6 +44,14 @@ export class PostagemService {
   putPostagens(postagem: Postagem): Observable<Postagem>{
     return this.http.put<Postagem>('https://vitalarte.herokuapp.com/postagens', postagem)
   }
+
+  curtir(id:number, postagem: Postagem): Observable<Postagem> {
+    return this.http.put<Postagem>(`https://vitalarte.herokuapp.com/postagens/curtir/${id}`, postagem)
+  }
+
+  // descurtir(id:number, postagem: Postagem): Observable<Postagem> {
+  //   return this.http.put<Postagem>(`https://vitalarte.herokuapp.com/postagens/descurtir/${id}`, postagem)
+  // }
 
   deletePostagens(id: number){
     return this.http.delete(`https://vitalarte.herokuapp.com/postagens/${id}`)

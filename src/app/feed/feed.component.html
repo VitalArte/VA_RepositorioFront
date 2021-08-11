@@ -2,37 +2,43 @@
   <div class="row">
     <div class="col mt-5">
       <div class="botoes d-flex justify-content-center">
-        <button class="btn sidenav-btn text-white fs-12 ms-1 me-2" data-bs-toggle="modal"
-          data-bs-target="#novaPostagem">Nova
-          postagem</button>
-        <a class="btn sidenav-btn fs-12 text-white ms-1" href="">Minhas postagens</a>
+        <a class="btn sidenav-btn fs-12 text-white ms-1 me-2" (click)='getPostagensByUsuario()'>Minhas postagens</a>
+        <a class="btn sidenav-btn fs-12 text-white ms-1" (click)='getPostagens()'>Todas as postagens</a>
       </div>
       <app-barrauser></app-barrauser>
+      <div class="d-flex justify-content-center mt-2">
+        <button class="btn sidenav-btn newpost text-white ms-1 me-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova  postagem</button>
+      </div>
     </div>
     <div class="mt-2 col-8">
 
       <!-- todo Row que contém as postagens -->
 
       <div class="container mb-5 mt-5" id="postagens">
-        <div *ngFor='let postagem of listaPostagem' class="card bg-light my-5 arredondada">
+        <div *ngFor='let postagem of listaPostagem | orderBy : key reverse' class="card bg-light my-5 arredondada">
           <div class="card-header d-flex py-2 arredondada-header">
             <div class="p-0">
               <img class="rounded-circle img-size-user" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">
             </div>
-            <p class="align-self-center">{{postagem.usuario.nome}}</p>
-            <p>{{postagem.data | date: 'dd/MM/yyyy'}}</p>
+            <div class="row">
+              <p class="align-self-center mb-0">{{postagem.usuario.nome}}</p>
+              <p class="my-0 py-0 data text-muted"><small>{{postagem.datahora | date: 'dd/MM/yyyy'}}</small></p>
+            </div>
             <h5 class="ms-auto align-self-center">{{postagem.titulo}}</h5>
           </div>
           <div class="card-body d-flex flex-column">
-            <img class="mx-auto my-2" style="max-width: 75%;" *ngIf='postagem.multimidia != null'
+            <img class="mx-auto my-2" style="max-width: 75%; max-height
+            :500px;" *ngIf='postagem.multimidia != null'
               src="{{postagem.multimidia}}" alt="Foto de postagem">
             <p class="card-text my-2">{{postagem.corpo}}</p>
             <div class="hashtags text-end my-2">{{postagem.hashtags}}
             </div>
             <hr class="m-0">
           </div>
-          <div class="card-footer d-flex">
-            <img src="../../assets/imagens/palminhas.png" alt="">
+          <div class="d-flex mb-2 mx-4">
+            <a (click)="getByIdPostagensCurtir(postagem.id); curtindo()">
+              <img src="../../assets/imagens/palminhas.png" alt="">
+            </a>
             <p class="ms-3"><strong>{{postagem.curtidas}}</strong> palminhas</p>
             <a *ngIf='postagem.usuario.id == usuario.id' (click)='getByIdPostagens(postagem.id)'
               class="btn btn-azul ms-auto py-2 text-white" data-bs-toggle="modal"
@@ -137,14 +143,12 @@
               <option *ngFor='let tema of listaTema' value="{{tema.id}}">{{tema.tema}}</option>
             </select>
           </div>
-          <a data-bs-toggle="modal" data-bs-target="#apagarPostagem" data-bs-dismiss="modal" class="mb-3">Deseja apagar
-            esta postagem?</a>
+          <a data-bs-toggle="modal" data-bs-target="#apagarPostagem" data-bs-dismiss="modal" class="mb-3">Deseja apagar esta postagem?</a>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" data-bs-dismiss="modal" class="btn btn-primary"
-          (click)='atualizarPostagem(postagemEdit.id)'>Salvar alterações</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)='atualizarPostagem(postagemEdit.id)'>Salvar alterações</button>
       </div>
     </div>
   </div>

@@ -7,6 +7,8 @@
 
 .img-size-user {
   height: 68px;
+  width: 68px;
+  object-fit: cover;
   padding: 0 !important;
 }
 
@@ -20,6 +22,11 @@
 
 .sidenav-btn {
   background-color: #263238;
+}
+
+.newpost:hover {
+  background-color: #1ee990;
+  color: #263238;
 }
 
 .fs-12 {
@@ -46,4 +53,8 @@ a {
 .btn-azul {
   background-color: #1e88e9;
 
+}
+
+.data {
+  font-size: 0.2rem;
 }

@@ -17,14 +17,20 @@ export class FeedComponent implements OnInit {
 
   constructor(private router: Router, private postagemservice: PostagemService, private temaservice: TemaService, private authservice: AuthService) { }
 
-  postagem: Postagem=new Postagem()
+  postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
-  postagemEdit: Postagem = new Postagem ()
+  postagemEdit: Postagem = new Postagem()
+  postagemCurtir: Postagem = new Postagem()
+
   tema: Tema = new Tema()
-  temaEdit: Tema = new Tema ()
+  temaEdit: Tema = new Tema()
   listaTema: Tema[]
   deletePostagemId: number
+
   usuario: Usuario = new Usuario()
+
+  key = 'datahora'
+  reverse = true
 
   ngOnInit() {
 
@@ -33,67 +39,99 @@ export class FeedComponent implements OnInit {
     this.getUsuarioById()
   }
 
-  getPostagens(){
+  getPostagens() {
     this.postagemservice.getAllPostagens().subscribe((resp: Postagem[]) => {
-    this.listaPostagem = resp
-    console.log(this.listaPostagem)
+      this.listaPostagem = resp
+      console.log(this.listaPostagem)
 
     })
   }
 
-  getByIdPostagens(id: number){
+  getByIdPostagens(id: number) {
     this.postagemservice.getByIdPostagem(id).subscribe((resp: Postagem) => {
-    this.postagemEdit = resp
-    this.deletePostagemId = this.postagemEdit.id
-    console.log(this.postagemEdit)
+      this.postagemEdit = resp
+      this.deletePostagemId = this.postagemEdit.id
+      console.log(this.postagemEdit)
 
     })
   }
 
-  getAllTemas(){
+  getByIdPostagensCurtir(id: number) {
+    this.postagemservice.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagemCurtir = resp
+      console.log(this.postagemCurtir)
+
+    })
+  }
+
+  getPostagensByUsuario() {
+    this.postagemservice.getUsuarioIdPostagens(this.usuario.id).subscribe((resp: Postagem[]) => {
+      this.listaPostagem = resp
+      console.log(this.listaPostagem)
+    })
+  }
+
+  getAllTemas() {
     this.temaservice.getAllTema().subscribe((resp: Tema[]) => {
-    this.listaTema = resp
+      this.listaTema = resp
     })
   }
 
-  getByIdTema (id:number){
-    this.temaservice.getbyIdTema(id).subscribe((resp: Tema) =>{
+  getByIdTema(id: number) {
+    this.temaservice.getbyIdTema(id).subscribe((resp: Tema) => {
       this.temaEdit = resp
-      console.log (this.temaEdit)
+      console.log(this.temaEdit)
     })
   }
 
-  cadastrar(){
+  cadastrar() {
     this.postagem.usuario = this.usuario
-    this.postagemservice.postPostagens(this.postagem).subscribe((resp: Postagem)=> {
-      this.postagem= resp
+    this.postagemservice.postPostagens(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
       console.log(this.postagem)
       this.postagem = new Postagem()
       this.getPostagens()
     })
-}
-
-atualizarPostagem (id: number){
-  this.getByIdPostagens (id)
-  this.postagemservice.putPostagens(this.postagemEdit).subscribe((resp: Postagem)=> {
-    this.postagemEdit = resp
-    alert ('Postagem alterada com sucesso.')
-    this.getPostagens()
-    this.postagemEdit = new Postagem()
-  })
   }
 
-apagarPostagem (){
-  this.postagemservice.deletePostagens(this.deletePostagemId).subscribe(()=>{
-    alert ('A postagem foi apagada com sucesso.')
-    this.getPostagens()
-  })
-}
+  atualizarPostagem(id: number) {
+    this.getByIdPostagens(id)
+    this.postagemservice.putPostagens(this.postagemEdit).subscribe((resp: Postagem) => {
+      this.postagemEdit = resp
+      alert('Postagem alterada com sucesso.')
+      this.getPostagens()
+      this.postagemEdit = new Postagem()
+    })
+  }
+
+  curtindo() {
+    this.postagemservice.curtir(this.postagemCurtir.id, this.postagemCurtir).subscribe((resp: Postagem) => {
+      this.postagemCurtir = resp
+      console.log(this.postagemCurtir)
+      this.getPostagens()
+      this.postagemCurtir = new Postagem()
+    })
+  }
+
+  // descurtindo() {
+  //   this.postagemservice.descurtir(this.postagemCurtir.id, this.postagemCurtir).subscribe((resp: Postagem) => {
+  //     this.postagemCurtir = resp
+  //     this.getPostagens()
+  //     this.postagemCurtir = new Postagem()
+  //   })
+  // }
+
+  apagarPostagem() {
+    this.postagemservice.deletePostagens(this.deletePostagemId).subscribe(() => {
+      alert('A postagem foi apagada com sucesso.')
+      this.getPostagens()
+    })
+  }
 
 
-getUsuarioById(){
-  this.authservice.getUsuarioById(environment.id).subscribe((resp: Usuario) => {
-    this.usuario = resp
-  })
-}
+  getUsuarioById() {
+    this.authservice.getUsuarioById(environment.id).subscribe((resp: Usuario) => {
+      this.usuario = resp
+    })
+  }
 }
