@@ -1,0 +1,81 @@
+.fundo {
+  display: flex;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.caixa {
+position: fixed;
+display: flex;
+width: 936px;
+height: 600px;
+top: 30px;
+bottom: 78px;
+left: 200px;
+border-radius: 15px;
+background-color: #FFFFFF;
+}
+
+.coluna {
+  position: fixed;
+  display: flex;
+  width: 350px;
+  height: 600px;
+  top: 30px;
+  bottom: 78px;
+  left: 200px;
+  border-radius: 15px;
+  background-color: #263238;
+  }
+
+   .row {
+    width: 400px;
+    margin-top: 0px;
+    margin-left: 165px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-self:auto;
+  }
+
+
+
+  input {
+    border-color: #263238;
+  }
+
+  input::placeholder {
+    color:#263238;
+  }
+
+  select {
+    color:#263238;
+    border-color: #263238;
+  }
+
+  textarea {
+    border-color: #263238;
+  }
+
+  textarea::placeholder {
+    color:#263238;
+  }
+
+  .btn {
+    width: 378px;
+    color:#FFFFFF;
+    background-color:#263238;
+  }
+
+  .conectar {
+  margin-top: 80px;
+  margin-left: 10px;
+  color:#FFFFFF;
+  }
+
+  #logar {
+    margin-top: 178px;
+    color: #263238;
+    background-color: #FFFFFF;
+    width: 215px;
+  }
