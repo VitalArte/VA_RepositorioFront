@@ -1,14 +1,49 @@
 .cobrinha {
   background-image: url('../../assets/imagens/cobrinhafundo.png');
-  object-fit: cover;
-
+  object-fit: stretch;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.img-size {
+.img-size-user {
   height: 68px;
   padding: 0 !important;
 }
 
+.arredondada {
+  border-radius: 25px;
+}
+.arredondada-header {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.sidenav-btn {
+  background-color: #263238;
+}
+
+.fs-12 {
+  font-size: 0.8rem;
+}
+
 #postagens h5 {
   font-size: 1.8rem;
+}
+
+#postagens p {
+  font-size: 1.15rem;
+}
+
+#postagens .hashtags {
+  color: #8F55F8
+}
+
+
+a {
+  cursor: pointer;
+}
+
+.btn-azul {
+  background-color: #1e88e9;
+
 }

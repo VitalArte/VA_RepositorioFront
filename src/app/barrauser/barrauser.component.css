@@ -9,14 +9,15 @@
 }
 
 .sidenav {
-  position: absolute;
+  /* position: absolute; */
   left: 3.82%;
   right: 68.68%;
   top: 23.24%;
   bottom: 15.92%;
-  width: 270px;
 
   height: 600px;
+  width: 35vh;
+
 
 
 
