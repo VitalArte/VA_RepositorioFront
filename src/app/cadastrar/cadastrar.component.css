@@ -5,15 +5,16 @@
 }
 
 .caixa {
-position: fixed;
-display: flex;
-height: 600px;
-top: 30px;
-bottom: 78px;
-left: 200px;
-border-radius: 15px;
-background-color: #FFFFFF;
-}
+  position: fixed;
+  display: flex;
+  width: 936px;
+  height: 600px;
+  top: 30px;
+  bottom: 78px;
+  left: 200px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  }
 
 .coluna {
   position: fixed;
