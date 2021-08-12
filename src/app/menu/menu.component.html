@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fundo-claro m-0 p-0">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="../../assets/imagens/VA.png" alt="" width="auto" height="80px">
+      <a class="navbar-brand" routerLink="/feed">
+        <img src="../../assets/imagens/LogoVA.png" alt="Logo VitalArte" width="auto" height="80px" class="ms-3">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,14 +9,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mt-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active d-flex flex-column me-4" aria-current="page" href="#"> <i class="fa fa-home icones-menu ms-2" aria-hidden="true"></i>Home</a>
+            <a class="nav-link active d-flex flex-column me-4" aria-current="page" routerLink="/feed"> <i class="fa fa-home icones-menu ms-2" aria-hidden="true"></i>Home</a>
           </li>
           <li class="nav-item dropdown d-flex">
             <a class="nav-link pb-0" href="#"> <img src="{{foto}}" alt="Foto do Usuário" width="40px" height="40px" class="img-fluid rounded-circle"></a>
               <a class="nav-link dropdown-toggle me-4 py-0 ps-0 align-self-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               </a>
             <ul class="dropdown-menu me-4" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Visualizar perfil</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Visualizar perfil</a></li> -->
               <li><a [routerLink]="['/editar-usuario', id]" class="dropdown-item">Configurações da conta</a></li>
             </ul>
           </li>
@@ -26,7 +26,11 @@
           </li> -->
           <li class="nav-item">
             <a class="nav-link d-flex flex-column me-4" routerLink="/tema">
-              <i class="fa fa-tags icones-menu ms-3" aria-hidden="true"></i>Temas</a>
+              <i class="fa fa-tags icones-menu ms-3"></i>Temas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex flex-column me-4" (click)='sair()'>
+              <i class="fa fa-sign-out icones-menu ms-3 text-center"></i>Sair</a>
           </li>
         </ul>
         <!-- <form class="d-flex w-35">

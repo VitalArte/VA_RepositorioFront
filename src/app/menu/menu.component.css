@@ -2,7 +2,8 @@
 
 .icones-menu{
     font-size: 30px;
-    color: #8836ff
+    color: #8836ff;
+    cursor: pointer;
 }
 
 .fundo-claro{
@@ -16,4 +17,5 @@
 
 li a {
     color: #8836ff;
+    cursor: pointer;
 }

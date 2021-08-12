@@ -1,8 +1,8 @@
-<div class="container-fluid">
+<div class="container-fluid borda-topo mt-2">
 
   <!-- ? Row que contém os textos -->
 
-<div class="row color">
+<div class="row color mt-3">
 <div class="col-md-12 text-color">
 
   <a routerLink='/feed' class="text-color text-left">
@@ -18,9 +18,9 @@
   <div class="row d-flex justify-content-center mt-4 mb-5">
       <div class="col-md-3">
           <div class="form-group">
-              <input [(ngModel)]='tema.tema' type="text" class="form-control" id="tema" placeholder="Digite o nome do tema">
-              <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
-              <input [(ngModel)]='tema.palavraChave' type="text" class="form-control" id="palavraChave" placeholder="Digite as palavras-chave">
+              <input name="tema" [(ngModel)]='tema.tema' type="text" class="form-control mb-2" id="tema" placeholder="Digite o nome do tema">
+              <input name="descricao" [(ngModel)]='tema.descricao' type="text" class="form-control mb-2" id="descricao" placeholder="Digite a descrição do tema">
+              <input name="palavraChave" [(ngModel)]='tema.palavraChave' type="text" class="form-control mb-2" id="palavraChave" placeholder="Digite as palavras-chave">
 
             </div>
 
@@ -64,6 +64,7 @@
 
               <th scope="col">Descrição</th>
               <th scope="col">Palavras-Chave</th>
+              <th scope="col">Alterar</th>
             </tr>
           </thead>
           <tbody>
@@ -73,7 +74,7 @@
               <td>{{item.descricao}}</td>
               <td>{{item.palavraChave}}</td>
               <td *ngIf='tipoUsuario =="admin"' class="d-flex justify-content-end">
-                <button (click)= 'getByIdTema(item.id)' class="btn btn-info mr-3" data-bs-toggle="modal" data-bs-target="#EditTema" >Editar</button>
+                <button (click)='getByIdTema(item.id)' class="btn btn-info mr-3" data-bs-toggle="modal" data-bs-target="#EditTema" >Editar</button>
                 <!-- <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]">Apagar</button> -->
               </td>
             </tr>

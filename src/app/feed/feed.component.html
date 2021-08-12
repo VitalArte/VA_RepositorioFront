@@ -143,7 +143,7 @@
           </div>
           <div class="mb-3">
 
-            <label for="texto">Escolha um tema <a *ngIf='usuario.tipoConta == "admin"' data-dismiss="modal"
+            <label for="texto">Escolha um tema <a *ngIf='usuario.tipoConta == "admin"' data-bs-dismiss="modal"
                 routerLink='/tema'>cadastre um novo</a>: </label>
             <select [(ngModel)]='tema.id' name="tema" id="tema" class="form-select form-control"
               (change)='getByIdTema(tema.id)'>
