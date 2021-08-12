@@ -22,6 +22,7 @@ background-attachment: fixed;
 background-size: 75vw auto;
 /* position: sticky; */
 z-index: -3;
+overflow-x: hidden;
 }
 
 .cartao {

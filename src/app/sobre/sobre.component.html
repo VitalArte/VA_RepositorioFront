@@ -72,7 +72,7 @@
       <div class="row d-flex justify-content-center align-items-baseline">
 
         <!-- Vini Teixeira -->
-        <div (mouseover)="toggle()" (mouseout)="toggle()" class="col px-2 border mx-1 cartao bg-light">
+        <div (mouseover)="toggleVini()" (mouseout)="toggleVini()"  class="col px-2 border mx-1 cartao bg-light">
           <div class="wrap-image">
             <div class="p-2">
               <div class="text-center">
@@ -80,11 +80,11 @@
                   src="../../assets/imagens/vini.jpeg" alt="">
               </div>
               <hr class="w-75 mx-auto">
-              <p class="m-0">Nome, descrição breve para deixar curioso?</p>
-              <div *ngIf='!estaAberto' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+              <p class="m-0">Vinícius Teixeira</p>
+              <div *ngIf='!estaAbertoV' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
                 <i class="fa fa-angle-double-down text-secondary"></i>
               </div>
-              <p [@mostrar]="estaAberto ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
+              <p [@mostrar]="estaAbertoV ? 'aberto' : 'fechado'" class="text-center animate__animated" id="sobreVini">Lorem ipsum dolor sit
                 amet
                 consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
                 explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
@@ -102,19 +102,19 @@
         <!-- /Vini Teixeira -->
 
         <!-- Ícaro Garcez -->
-        <div (mouseover)="toggle()" (mouseout)="toggle()" class="col px-2 border mx-1 cartao bg-light">
+        <div (mouseover)="toggleIcaro()" (mouseout)="toggleIcaro()" class="col px-2 border mx-1 cartao bg-light">
           <div class="wrap-image">
             <div class="p-2">
               <div class="text-center">
                 <img class="rounded-circle img-fluid w-75"
-                  src="../../assets/imagens/thana.jpg" alt="">
+                  src="../../assets/imagens/icaro.jpg" alt="">
               </div>
               <hr class="w-75 mx-auto">
-              <p class="m-0">Nome, descrição breve para deixar curioso?</p>
-              <div *ngIf='!estaAberto' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+              <p class="m-0">Ícaro Garcez</p>
+              <div *ngIf='!estaAbertoI' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
                 <i class="fa fa-angle-double-down text-secondary"></i>
               </div>
-              <p [@mostrar]="estaAberto ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
+              <p [@mostrar]="estaAbertoI ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
                 amet
                 consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
                 explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
@@ -132,19 +132,19 @@
         <!-- /Ícaro Garcez -->
 
         <!-- Thana Rodrigues -->
-        <div (mouseover)="toggle()" (mouseout)="toggle()" class="col px-2 border mx-1 cartao bg-light">
+        <div (mouseover)="toggleThana()" (mouseout)="toggleThana()" class="col px-2 border mx-1 cartao bg-light">
           <div class="wrap-image">
             <div class="p-2">
               <div class="text-center">
                 <img class="rounded-circle img-fluid w-75"
-                  src="../../assets/imagens/icaro.jpg" alt="">
+                  src="../../assets/imagens/thana.jpg" alt="">
               </div>
               <hr class="w-75 mx-auto">
-              <p class="m-0">Nome, descrição breve para deixar curioso?</p>
-              <div *ngIf='!estaAberto' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+              <p class="m-0">Thana Rodrigues</p>
+              <div *ngIf='!estaAbertoT' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
                 <i class="fa fa-angle-double-down text-secondary"></i>
               </div>
-              <p [@mostrar]="estaAberto ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
+              <p [@mostrar]="estaAbertoT ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
                 amet
                 consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
                 explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
@@ -163,7 +163,7 @@
 
 
         <!-- Ana Oliveira -->
-        <div (mouseover)="toggle()" (mouseout)="toggle()" class="col px-2 border mx-1 cartao bg-light">
+        <div (mouseover)="toggleAna()" (mouseout)="toggleAna()" class="col px-2 border mx-1 cartao bg-light">
           <div class="wrap-image">
             <div class="p-2">
               <div class="text-center">
@@ -171,11 +171,11 @@
                   src="../../assets/imagens/ana.jpg" alt="">
               </div>
               <hr class="w-75 mx-auto">
-              <p class="m-0">Nome, descrição breve para deixar curioso?</p>
-              <div *ngIf='!estaAberto' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+              <p class="m-0">Ana Oliveira</p>
+              <div *ngIf='!estaAbertoA' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
                 <i class="fa fa-angle-double-down text-secondary"></i>
               </div>
-              <p [@mostrar]="estaAberto ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
+              <p [@mostrar]="estaAbertoA ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
                 amet
                 consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
                 explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
@@ -193,7 +193,7 @@
         <!-- /Ana Oliveira -->
 
         <!-- Leandro Souza -->
-        <div (mouseover)="toggle()" (mouseout)="toggle()" class="col px-2 border mx-1 cartao bg-light">
+        <div (mouseover)="toggleLe()" (mouseout)="toggleLe()" class="col px-2 border mx-1 cartao bg-light">
           <div class="wrap-image">
             <div class="p-2">
               <div class="text-center">
@@ -201,11 +201,11 @@
                   src="../../assets/imagens/lele.jpg" alt="">
               </div>
               <hr class="w-75 mx-auto">
-              <p class="m-0">Nome, descrição breve para deixar curioso?</p>
-              <div *ngIf='!estaAberto' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+              <p class="m-0">Leandro Souza</p>
+              <div *ngIf='!estaAbertoL' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
                 <i class="fa fa-angle-double-down text-secondary"></i>
               </div>
-              <p [@mostrar]="estaAberto ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
+              <p [@mostrar]="estaAbertoL ? 'aberto' : 'fechado'" class="text-center" id="sobre">Lorem ipsum dolor sit
                 amet
                 consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
                 explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
@@ -240,10 +240,3 @@
 </div>
 <!-- /CONTEÚDO TOTAL DA PÁGINA -->
 
-
-<script>
-  function displayAbout() {
-    let about = document.getElementById('sobre');
-    about.classList.toggle('animate__slideInDown')
-  }
-</script>

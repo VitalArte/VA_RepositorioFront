@@ -21,8 +21,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreComponent implements OnInit {
 
-  estaAberto = false;
-  piscando = true
+  estaAbertoV = false;
+  estaAbertoI = false;
+  estaAbertoT = false;
+  estaAbertoA = false;
+  estaAbertoL = false;
 
 
   constructor() { }
@@ -32,10 +35,28 @@ export class SobreComponent implements OnInit {
 
   }
 
-  toggle() {
-    this.estaAberto = !this.estaAberto
+  toggleVini() {
+    this.estaAbertoV = !this.estaAbertoV
   }
-  //-Todos estão abrindo de uma vez só, ver se eu consigo ajeitar essa animação ou se vai ser na base de criar uma animação pra cada um.
 
+  toggleIcaro() {
+    this.estaAbertoI = !this.estaAbertoI
+  }
+
+  toggleThana() {
+    this.estaAbertoT = !this.estaAbertoT
+  }
+
+  toggleAna() {
+    this.estaAbertoA = !this.estaAbertoA
+  }
+
+  toggleLe() {
+    this.estaAbertoL = !this.estaAbertoL
+  }
+  // displayAbout() {
+  //   let about = document.getElementById('sobreVini');
+  //   about!.classList.toggle('animate__slideInDown')
+  // }
 
 }
