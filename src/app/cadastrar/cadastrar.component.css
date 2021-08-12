@@ -1,7 +1,6 @@
 .fundo {
   display: flex;
   position: relative;
-  width: 100vh;
 }
 
 .caixa {
@@ -10,7 +9,6 @@
   width: 936px;
   height: 600px;
   top: 30px;
-  bottom: 78px;
   left: 200px;
   border-radius: 15px;
   background-color: #FFFFFF;
@@ -21,7 +19,7 @@
   display: flex;
   width: 350px;
   height: 600px;
-  margin-right: 143vh;
+  margin-right: 140vh;
   border-radius: 15px;
   background-color: #263238;
   }
@@ -29,7 +27,7 @@
    .row {
     width: 400px;
     margin-top: 0px;
-    margin-left: 165px;
+    margin-left: 45%;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -57,9 +55,6 @@
     color:#263238;
   }
 
-  h3 {
-    margin-right: 22%;
-  }
 
   .btn {
     width: 378px;
@@ -68,9 +63,10 @@
   }
 
   .conectar {
-  margin-top: 80px;
-  margin-left: 10px;
+  margin-top: 5vh;
+  margin-left: 1%;
   color:#FFFFFF;
+  padding: 10%;
   }
 
   #logar {
@@ -78,4 +74,12 @@
     color: #263238;
     background-color: #FFFFFF;
     width: 215px;
+  }
+
+  h1 {
+    margin-top: 5vh;
+  }
+
+  a {
+    color:#FFFFFF;
   }
