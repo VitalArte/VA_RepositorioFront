@@ -1,2 +1,14 @@
-/*Configurações de responsividade*/
+html,
+body,
+header,
+#background{
+    background-image: url("../../assets/imagens/background2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh
+
+
+}
+
+
 
