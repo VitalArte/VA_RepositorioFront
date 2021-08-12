@@ -29,6 +29,17 @@ z-index: -3;
 
 }
 
+.tecnologias ul {
+  list-style: none;
+}
+
+.tecnologias {
+  font-size: 2rem;
+}
+
+.icones-tec {
+  font-size: 3rem;
+}
 
 
 .wrap-image {

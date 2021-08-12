@@ -26,10 +26,12 @@ export class FeedComponent implements OnInit {
   tema: Tema = new Tema()
   temaEdit: Tema = new Tema()
   listaTema: Tema[]
-  descricaoTema: string
+
+  feedBusca = false
 
 
   usuario: Usuario = new Usuario()
+  nomeUsuario: string
 
   key = 'datahora'
   reverse = true
@@ -44,6 +46,7 @@ export class FeedComponent implements OnInit {
   getPostagens() {
     this.postagemservice.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagem = resp
+      this.feedBusca = false
       console.log(this.listaPostagem)
 
     })
@@ -69,20 +72,33 @@ export class FeedComponent implements OnInit {
   getPostagensByUsuario() {
     this.postagemservice.getUsuarioIdPostagens(this.usuario.id).subscribe((resp: Postagem[]) => {
       this.listaPostagem = resp
+      this.feedBusca = false
+
       console.log(this.listaPostagem)
     })
   }
 
-  getPostagensByTema() {
-    if(this.descricaoTema == '') {
-      this.getAllTemas()
+  getPostagensByUsuarioNome(){
+    this.postagemservice.getUsuarioNomePostagens(this.nomeUsuario).subscribe((resp: Postagem[]) => {
+      this.listaPostagem = resp
+      // this.feedBusca = false
 
-    }
-
-    this.temaservice.getTopicoTema(this.descricaoTema).subscribe((resp: Tema[]) => {
-      this.listaTema = resp
+      console.log(this.listaPostagem)
     })
   }
+
+  // getPostagensByTema() {
+  //   if(this.descricaoTema == null) {
+  //     this.getAllTemas()
+  //     this.feedBusca = false
+
+  //   }
+
+  //   this.temaservice.getTopicoTema(this.descricaoTema).subscribe((resp: Tema[]) => {
+  //     this.listaTema = resp
+  //     this.feedBusca = true
+  //   })
+  // }
 
   getAllTemas() {
     this.temaservice.getAllTema().subscribe((resp: Tema[]) => {
@@ -99,6 +115,7 @@ export class FeedComponent implements OnInit {
 
   cadastrar() {
     this.postagem.usuario = this.usuario
+    this.postagem.tema = this.temaEdit
     this.postagemservice.postPostagens(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       console.log(this.postagem)

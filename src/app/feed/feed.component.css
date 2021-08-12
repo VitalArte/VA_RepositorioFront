@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-origin: -5 -5;
+  background-size: 100vw auto;
 }
 
 .img-size-user {
