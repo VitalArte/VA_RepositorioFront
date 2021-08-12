@@ -1,0 +1,70 @@
+.fundo {
+  display: flex;
+  position: relative;
+  width: 100vh;
+}
+
+.caixa {
+  position: absolute;
+  display: flex;
+  width: 936px;
+  height: 500px;
+  top: 12vh;
+  left: 200px;
+  border-radius: 15px;
+  background-color: #263238;
+  }
+
+.coluna {
+  position: absolute;
+  display: flex;
+  width: 350px;
+  height: 500px;
+  margin-right: 143vh;
+  border-radius: 15px;
+  background-color: #8836ff;
+  }
+
+   .row {
+    width: 400px;
+    margin-top: 0px;
+    margin-left: 165px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-self:auto;
+  }
+
+  h2 {
+    margin-top: 18vh;
+  }
+  input {
+    border-color: #ffffff;
+  }
+
+  input::placeholder {
+    color:#263238;
+  }
+
+  .btn {
+    width: 378px;
+    color: #263238;
+    background-color: #ffffff;
+  }
+
+  .conectar {
+  margin-top: 80px;
+  margin-left: 10px;
+  color:#FFFFFF;
+  }
+
+  #cadastro {
+    margin-top: 178px;
+    color: #ffffff;
+    background-color: #263238;
+    width: 215px;
+  }
+
+  h3 {
+    margin-right: 22%;
+  }
