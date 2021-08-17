@@ -1,10 +1,6 @@
-.cobrinha {
-  background-image: url('../../assets/imagens/cobrinhafundo.png');
-  object-fit: stretch;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-origin: -5 -5;
-  background-size: 100vw auto;
+.fundo-escuro {
+  background-color: #263238;
+
 }
 
 .img-size-user {
@@ -14,16 +10,10 @@
   padding: 0 !important;
 }
 
-.arredondada {
-  border-radius: 25px;
-}
-.arredondada-header {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-
 .sidenav-btn {
   background-color: #263238;
+  width: 35vh;
+
 }
 
 .newpost:hover {
@@ -34,6 +24,7 @@
 .fs-12 {
   font-size: 0.8rem;
 }
+
 
 #postagens h5 {
   font-size: 1.8rem;
