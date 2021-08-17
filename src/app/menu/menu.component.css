@@ -6,9 +6,9 @@
     cursor: pointer;
 }
 
-.fundo-claro{
-    background-color: rgba(255, 255, 255, 0.438);
-
+.fundo-dark{
+    background-color: #263238;
+    border-bottom: 2px solid #8836ff;
 }
 
 .btn-outline-dark{
