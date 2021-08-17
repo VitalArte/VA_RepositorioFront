@@ -11,23 +11,26 @@
 }
 
 .sidenav-btn {
-  background-color: #263238;
+  background-color: #A492E1;
   width: 35vh;
 
 }
 
-.newpost:hover {
-  background-color: #1ee990;
-  color: #263238;
+.sidenav-btn:hover {
+  background-color: #8836ff;
 }
 
 .fs-12 {
-  font-size: 0.8rem;
+  font-size: 1rem !important;
 }
 
+.borda-azul {
+  border-bottom: 1px solid #8836ff;
+}
 
 #postagens h5 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 #postagens p {
@@ -43,11 +46,14 @@ a {
   cursor: pointer;
 }
 
-.btn-azul {
-  background-color: #1e88e9;
+.editar {
+  color: #1e88e9;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
 
 }
 
 .data {
-  font-size: 0.2rem;
+  font-size: 0.8rem !important;
 }

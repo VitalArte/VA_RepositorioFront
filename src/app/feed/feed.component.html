@@ -10,10 +10,10 @@
     <div class="col-4 mt-5">
       <app-barrauser></app-barrauser>
       <div class="container d-flex flex-column-reverse align-items-end">
-        <a class="btn sidenav-btn newpost text-white" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova  postagem</a>
+        <a class="btn rounded-0 sidenav-btn newpost text-white" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova  postagem</a>
       <!-- <div class="botoes d-flex justify-content-center"> -->
-        <a class="btn sidenav-btn text-white" (click)='getPostagensByUsuario()'>Minhas postagens</a>
-        <a class="btn sidenav-btn text-white " (click)='getPostagens()'>Todas as postagens</a>
+        <a class="btn rounded-0 borda-azul sidenav-btn text-white" (click)='getPostagensByUsuario()'>Minhas postagens</a>
+        <a class="btn rounded-0 borda-azul sidenav-btn text-white " (click)='getPostagens()'>Todas as postagens</a>
       </div>
     </div>
     <div class="col-lg-6">
@@ -24,18 +24,18 @@
         <div *ngFor='let postagem of listaPostagem | orderBy : key:reverse' class="card bg-light my-5">
           <div class="card-header d-flex py-2">
             <div class="p-0">
-              <img class="rounded-circle img-size-user" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">
+              <img class="rounded-circle img-size-user me-2" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">
             </div>
             <div class="row">
-              <p class="align-self-center mb-0">{{postagem.usuario.nome}}</p>
-              <p class="my-0 py-0 data text-muted"><small>{{postagem.datahora | date: 'dd/MM/yyyy'}}</small></p>
+              <p class="mt-auto mb-0 fs-12">{{postagem.usuario.nome}}</p>
+              <p class="my-0 py-0 data text-muted">{{postagem.datahora | date: 'dd/MM/yyyy'}}</p>
             </div>
             <h5 class="ms-auto align-self-center">{{postagem.titulo}}</h5>
           </div>
           <div class="card-body d-flex flex-column">
             <p class="m-0 p-0 text-muted"><em>Tema: {{postagem.tema.tema}}</em></p>
-            <img class="mx-auto my-2" style="max-width: 75%; max-height
-            :500px;" *ngIf='postagem.multimidia != null'
+            <img class="mx-auto my-2" style="max-width: 85%; max-height
+            :400px;" *ngIf='postagem.multimidia != null'
               src="{{postagem.multimidia}}" alt="Foto de postagem">
             <p class="card-text my-2 w-75 mx-auto">{{postagem.corpo}}</p>
             <div class="hashtags text-end my-2">{{postagem.hashtags}}
@@ -48,7 +48,7 @@
             </a>
             <p class="ms-3"><strong>{{postagem.curtidas}}</strong> palminhas</p>
             <a *ngIf='postagem.usuario.id == usuario.id' (click)='getByIdPostagens(postagem.id)'
-              class="btn btn-azul ms-auto py-2 text-white" data-bs-toggle="modal"
+              class="editar ms-auto py-2" data-bs-toggle="modal"
               data-bs-target="#editarPostagem">Editar</a>
           </div>
         </div>
