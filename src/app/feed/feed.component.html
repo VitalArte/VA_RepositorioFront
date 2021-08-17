@@ -1,4 +1,4 @@
-<div class="container-fluid cobrinha">
+<div class="container-fluid fundo-escuro">
 
   <div class="row">
     <form class="col-6 mt-2 ms-auto">
@@ -7,23 +7,22 @@
   </div>
 
   <div class="row">
-    <div class="col mt-5">
-      <div class="botoes d-flex justify-content-center">
-        <a class="btn sidenav-btn fs-12 text-white ms-1 me-2" (click)='getPostagensByUsuario()'>Minhas postagens</a>
-        <a class="btn sidenav-btn fs-12 text-white ms-1" (click)='getPostagens()'>Todas as postagens</a>
-      </div>
+    <div class="col-4 mt-5">
       <app-barrauser></app-barrauser>
-      <div class="d-flex justify-content-center mt-2">
-        <button class="btn sidenav-btn newpost text-white ms-1 me-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova  postagem</button>
+      <div class="container d-flex flex-column-reverse align-items-end">
+        <a class="btn sidenav-btn newpost text-white" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova  postagem</a>
+      <!-- <div class="botoes d-flex justify-content-center"> -->
+        <a class="btn sidenav-btn text-white" (click)='getPostagensByUsuario()'>Minhas postagens</a>
+        <a class="btn sidenav-btn text-white " (click)='getPostagens()'>Todas as postagens</a>
       </div>
     </div>
-    <div class="col-8">
+    <div class="col-lg-6">
 
       <!-- todo Col que contém as postagens -->
 
       <div class="container mb-5 mt-5" id="postagens" *ngIf='!feedBusca'>
-        <div *ngFor='let postagem of listaPostagem | orderBy : key:reverse' class="card bg-light my-5 arredondada">
-          <div class="card-header d-flex py-2 arredondada-header">
+        <div *ngFor='let postagem of listaPostagem | orderBy : key:reverse' class="card bg-light my-5">
+          <div class="card-header d-flex py-2">
             <div class="p-0">
               <img class="rounded-circle img-size-user" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">
             </div>
