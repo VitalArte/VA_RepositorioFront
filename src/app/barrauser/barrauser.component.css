@@ -2,10 +2,12 @@
   max-width: 1200px;
 
   text-align: center;
+  font-style: italic;
+}
 
+.desktop{
   display: inline;
 
-  font-style: italic;
 }
 
 .sidenav {
@@ -14,10 +16,10 @@
   right: 68.68%;
   top: 23.24%;
   bottom: 15.92%;
-  
+
   width: 35vh;
 
-  background: #A492E1;
+  background: #7B43CD;
 
 }
 
@@ -41,4 +43,10 @@ a.btn-nome:hover {
   margin: 5px 5px;
   text-decoration: underline;
 
+}
+
+@media(max-width: 440px) {
+  .desktop {
+    display: none !important;
+  }
 }

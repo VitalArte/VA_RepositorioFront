@@ -28,13 +28,13 @@ export class LogarComponent implements OnInit {
         environment.token= this.usuarioLogin.token
         environment.nome= this.usuarioLogin.nome
 
-        environment.id= this.usuarioLogin.id
+        environment.id = this.usuarioLogin.id
         environment.tipoConta= this.usuarioLogin.tipoConta
         environment.email= this.usuarioLogin.email
         environment.biografia = this.usuarioLogin.biografia
-        
-        if(this.usuarioLogin.foto != ''){
-          environment.foto= this.usuarioLogin.foto
+
+        if(this.usuarioLogin.foto != null){
+          environment.foto = this.usuarioLogin.foto
         }
 
         this.router.navigate(['/feed'])

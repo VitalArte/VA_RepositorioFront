@@ -11,13 +11,13 @@
 }
 
 .sidenav-btn {
-  background-color: #A492E1;
+  background-color: #7B43CD;
   width: 35vh;
 
 }
 
 .sidenav-btn:hover {
-  background-color: #8836ff;
+  background-color: #1ee990;
 }
 
 .fs-12 {
@@ -31,6 +31,7 @@
 #postagens h5 {
   font-size: 1.5rem;
   font-weight: 700;
+  text-align:end;
 }
 
 #postagens p {
@@ -56,4 +57,52 @@ a {
 
 .data {
   font-size: 0.8rem !important;
+}
+
+.mobile {
+  display: none;
+}
+
+.fs-lg {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+.acoes-mobile {
+  background-color: #7B43CD;
+  height: 50px;
+  width: 50px;
+  box-shadow: inset 0em 0em 10px rgba(0, 0, 0, 0.418);
+}
+
+
+@media(max-width: 440px){
+  
+  .sidenav-btn {
+    display: none;
+  }
+
+  #postagens h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align:end;
+  }
+
+  .mobile {
+    display: inline;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .card-body p {
+    width: 95% !important;
+  }
+
+
 }

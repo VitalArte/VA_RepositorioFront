@@ -19,3 +19,30 @@ li a {
     color: #8836ff;
     cursor: pointer;
 }
+
+.mobile{
+  display: none;
+}
+
+@media(max-width: 450px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block !important;
+    height: 50px;
+  }
+
+  .img-usuario {
+    border: 2px solid #8836ff !important;
+  }
+
+  .icones-menu{
+    font-size: 20pt;
+    color: #8836ff;
+    
+  }
+
+
+}
