@@ -31,6 +31,8 @@ export class LogarComponent implements OnInit {
         environment.id= this.usuarioLogin.id
         environment.tipoConta= this.usuarioLogin.tipoConta
         environment.email= this.usuarioLogin.email
+        environment.biografia = this.usuarioLogin.biografia
+        
         if(this.usuarioLogin.foto != ''){
           environment.foto= this.usuarioLogin.foto
         }
