@@ -1,71 +1,56 @@
-<div class="fundo">
-  <img src="../../assets/imagens/logarfundo.svg">
-</div>
+<div class= "d-flex position-relative overflow-hidden">
+  <div class="container-fluid me-0 ms-0 p-0 mt-0 mb-0 vw-100 vh-100">
+    <img src="../../assets/imagens/logarfundo.svg">
+    <div class="container-fluid">
+      <div class="caixa">
+        <div class="container-fluid">
+          <div class="col-md-12">
+            <div class="form">
+              <div class="row">
 
-<div class="container-fluid col-md-7 col-lg-6 ml-auto">
-  <div class="caixa">
-    <div class="row">
+                <h2 class="mb-4 text-center text-white">Iniciar Sessão</h2>
 
-      <!-- Cadastro Form -->
+                <!-- Email -->
+               <div class="input-group col-lg-6 mb-4">
+                  <div class="input-group-prepend">
+                  </div>
+                  <input [(ngModel)]='usuarioLogin.email' id="email" type="email" name="email" placeholder="Email"
+                    class="form-control">
+                </div>
 
-      <div class="col-md-7 col-lg-6 ml-auto">
-        <form action="#">
-          <div class="row">
+                <!-- Senha -->
+                 <div class="input-group col-lg-6 mb-4">
+                  <div class="input-group-prepend">
+                  </div>
+                  <input [(ngModel)]='usuarioLogin.senha' id="senha" type="password" name="senha" placeholder="Senha"
+                    class="form-control">
+                </div>
 
-            <h2 class="mb-4 text-center text-white">Iniciar Sessão</h2>
-
-            <!-- Email -->
-           <div class="input-group col-lg-6 mb-4">
-              <div class="input-group-prepend">
-              </div>
-              <input [(ngModel)]='usuarioLogin.email' id="email" type="email" name="email" placeholder="Email"
-                class="form-control">
-            </div>
-
-            <!-- Senha -->
-             <div class="input-group col-lg-6 mb-4">
-              <div class="input-group-prepend">
-              </div>
-              <input [(ngModel)]='usuarioLogin.senha' id="senha" type="password" name="senha" placeholder="Senha"
-                class="form-control">
-            </div>
-
-            <!-- Criar conta -->
-             <div class="form-group col-lg-12 mx-auto mb-0">
-              <a type="submit" class="btn btn-block py-2">
-                <span (click)='logar()' class="font-weight-bold">Entrar</span>
-              </a>
-            </div>
-
-            <div class="coluna">
-              <div class="row conectar">
-                <h1>Conecte-se</h1>
-                <h3 class= "col-md-9">Criar, expressar, compartilhar e valorizar.</h3>
-                <div class="col-lg-12 mx-auto mb-0">
-                  <a routerLink="/cadastrar" type="submit" class="btn btn-block py-2" id="cadastro">
-                    <span class="font-weight-bold">Faça o cadastro</span>
+                <!-- Criar conta -->
+                 <div (click)='logar()' class="form-group col-lg-12 mx-auto mb-0">
+                  <a type="submit" class="btn btn-block py-2">
+                    <span class="font-weight-bold">Entrar</span>
                   </a>
                 </div>
+
+                <div class="coluna">
+                  <div class="row conectar">
+                    <a routerLink='/'>Voltar para o início</a>
+                    <h1>Conecte-se</h1>
+                    <h3 class= "col-md-9">Criar, expressar, compartilhar e valorizar.</h3>
+                    <div class="col-lg-12 mx-auto mb-0">
+                      <a routerLink="/cadastrar" type="submit" class="btn btn-block py-2" id="cadastro">
+                        <span class="font-weight-bold">Faça o cadastro</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
-
-<!-- <div class="container">
-  <h1>Iniciar sessão</h1>
-  <form>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input [(ngModel)]='usuarioLogin.email' name='email' type="email" class="form-control" id="email" aria-describedby="email">
-
+        </div>
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="senha" class="form-label">Senha</label>
-      <input [(ngModel)]='usuarioLogin.senha' name='senha' type="password" class="form-control" id="senha">
-    </div>
-
-    <button type="submit" class="btn btn-primary" (click)='logar()'>Entrar</button>
-  </form>
-  <p class="text-center">Não tem uma conta? <a routerLink="/cadastrar">Cadastre-se</a></p>
-</div> -->
-
-
+  </div>
+</div>
