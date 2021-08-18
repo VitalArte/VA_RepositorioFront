@@ -12,7 +12,9 @@
 
 .sidenav-btn {
   background-color: #7B43CD;
-  width: 35vh;
+
+  width: 32vw;
+  max-width: 350px;
 
 }
 
@@ -81,7 +83,7 @@ a {
 
 
 @media(max-width: 440px){
-  
+
   .sidenav-btn {
     display: none;
   }
