@@ -46,6 +46,7 @@ overflow-x: hidden;
 .wrap-image {
   position: relative;
 }
+
 .wrap-image::before {
   content: "";
   width: 100%;
@@ -78,6 +79,10 @@ overflow-x: hidden;
 .wrap-image:hover::after {
   bottom: 22px;
   right: 30px;
+}
+
+.w-90 {
+  width: 90%;
 }
 
 /* #sobre {
