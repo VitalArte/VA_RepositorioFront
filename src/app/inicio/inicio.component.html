@@ -1,56 +1,66 @@
 <!-- Header -->
 
 <div id="header" class="topo">
-    <!-- Header -->
-
-    <div class="container">
-      <!-- Container -->
-
-      <nav class="navbar navbar-expand-lg navbar-light">
-
-        <!-- Logo -->
-          <a class= "navbar-brand" href ="#">
-              <img src= "../../assets/imagens/LogoVA_preto.png" height="80px">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
-
-          <!-- Navegação -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="/">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre nós</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink='/cadastrar'>Cadastrar</a>
-            </li>
-          </ul>
-
-            <button class="header-btn my-2 my-sm-0" type="submit" routerLink='/logar'>Entrar</button>
-        </div>
-      </nav>
-    </div> <!-- Container -->
-  </div> <!-- Header -->
-
   <!-- Header -->
 
-  <!-- Imagem central-->
-  <main class="m-0 p-0">
+  <div class="container">
+    <!-- Container -->
 
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img
+          src="../../assets/imagens/LogoVA_preto.png"
+          onmouseover="this.src='./assets/imagens/logoVaCompleto.jfif'"
+          onmouseout="this.src='../../assets/imagens/LogoVA_preto.png'"
+          height="80px"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <!-- Navegação -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/"
+              >Início</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cadastrar">Cadastrar</a>
+          </li>
+        </ul>
 
-    <div class="full-bg-img container-fluid m-0 p-0" id="background">
-
-
+        <button
+          class="header-btn my-2 my-sm-0"
+          type="submit"
+          routerLink="/logar"
+        >
+          Entrar
+        </button>
       </div>
-<app-sobre id="sobre"></app-sobre>
+    </nav>
+  </div>
+  <!-- Container -->
+</div>
+<!-- Header -->
 
+<!-- Header -->
 
-
-
-
+<!-- Imagem central-->
+<main class="m-0 p-0">
+  <div class="full-bg-img container-fluid m-0 p-0" id="background"></div>
+  <app-sobre id="sobre"></app-sobre>
 </main>

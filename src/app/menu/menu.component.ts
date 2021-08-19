@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Postagem } from '../model/Postagem';
+import { Tema } from '../model/Tema';
+import { Usuario } from '../model/Usuario';
+import { PostagemService } from '../service/postagem.service';
 
 @Component({
   selector: 'app-menu',
@@ -14,7 +18,24 @@ export class MenuComponent implements OnInit {
   token= environment.token
   id= environment.id
 
-  constructor(private router: Router) { }
+
+  postagem: Postagem = new Postagem()
+  listaPostagem: Postagem[]
+  postagemEdit: Postagem = new Postagem()
+  postagemCurtir: Postagem = new Postagem()
+  deletePostagemId: number
+
+  tema: Tema = new Tema()
+  temaEdit: Tema = new Tema()
+  listaTema: Tema[]
+
+
+  feedBusca = false
+  nomeUsuario: string
+
+  usuario: Usuario = new Usuario()
+
+  constructor(private router: Router,private postagemservice: PostagemService) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +50,23 @@ export class MenuComponent implements OnInit {
     environment.biografia = ''
     this.router.navigate(['/'])
 
+  }
+  getPostagensByUsuario() {
+    this.postagemservice.getUsuarioIdPostagens(this.usuario.id).subscribe((resp: Postagem[]) => {
+      this.listaPostagem = resp
+      this.feedBusca = false
+
+      console.log(this.listaPostagem)
+    })
+  }
+
+  getPostagensByUsuarioNome(){
+    this.postagemservice.getUsuarioNomePostagens(this.nomeUsuario).subscribe((resp: Postagem[]) => {
+      this.listaPostagem = resp
+      // this.feedBusca = false
+
+      console.log(this.listaPostagem)
+    })
   }
 
 }
