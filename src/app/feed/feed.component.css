@@ -1,6 +1,17 @@
 .fundo-escuro {
   background-color: #263238;
 
+  /* Opção 1 */
+  background-image: url('../../assets/imagens/fundofeed_op3_cortado.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right bottom;
+
+  /* Opção 2 */
+  /* background-image: url('../../assets/imagens/fundofeed_op1_continuo.png');
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: auto 100vh; */
 }
 
 .img-size-user {
