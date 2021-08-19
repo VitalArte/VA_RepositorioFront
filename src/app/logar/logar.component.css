@@ -20,7 +20,7 @@
   display: flex;
   width: 350px;
   height: 500px;
-  margin-right: 143vh;
+  margin-right: 154vh;
   border-radius: 15px;
   background-color: #8836ff;
   }
@@ -28,7 +28,7 @@
    .row {
     width: 400px;
     margin-top: 0px;
-    margin-left: 165px;
+    margin-left: 40%;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -53,9 +53,9 @@
   }
 
   .conectar {
-  margin-top: 80px;
-  margin-left: 10px;
-  color:#FFFFFF;
+    margin-top: 5vh;
+    margin-left: 1%;
+    color:#ffffff;
   }
 
   #cadastro {
@@ -67,4 +67,12 @@
 
   h3 {
     margin-right: 22%;
+  }
+
+  h1 {
+    margin-top: 5vh;
+  }
+
+  a {
+    color:#FFFFFF;
   }

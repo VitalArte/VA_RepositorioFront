@@ -1,30 +1,50 @@
 <div class="container-fluid fundo-escuro">
 
-  <div class="row">
+  <div class="row desktop">
     <form class="col-6 mt-2 ms-auto">
-      <input name="nomeUser" [(ngModel)]='nomeUsuario' (keyup)='getPostagensByUsuarioNome()' class="form-control w-75 mb-n3" type="search" placeholder="Pesquise por nome de usuário" aria-label="Search">
+      <input name="nomeUser" [(ngModel)]='nomeUsuario' (keyup)='getPostagensByUsuarioNome()'
+        class="form-control w-75 mb-n3" type="search" placeholder="Pesquise por nome de usuário" aria-label="Search">
     </form>
   </div>
 
   <div class="row">
-    <div class="col-4 mt-5">
+    <div class="col-4 mt-5 desktop">
       <app-barrauser></app-barrauser>
       <div class="container d-flex flex-column-reverse align-items-end">
-        <a class="btn rounded-0 sidenav-btn newpost text-white" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova  postagem</a>
-      <!-- <div class="botoes d-flex justify-content-center"> -->
-        <a class="btn rounded-0 borda-azul sidenav-btn text-white" (click)='getPostagensByUsuario()'>Minhas postagens</a>
+        <a class="btn rounded-0 sidenav-btn text-white" data-bs-toggle="modal"
+          data-bs-target="#novaPostagem">Nova postagem</a>
+        <!-- <div class="botoes d-flex justify-content-center"> -->
+        <a class="btn rounded-0 borda-azul sidenav-btn text-white" (click)='getPostagensByUsuario()'>Minhas
+          postagens</a>
         <a class="btn rounded-0 borda-azul sidenav-btn text-white " (click)='getPostagens()'>Todas as postagens</a>
       </div>
+
     </div>
-    <div class="col-lg-6">
 
-      <!-- todo Col que contém as postagens -->
+    <!-- ! Menu mobile -->
 
-      <div class="container mb-5 mt-5" id="postagens" *ngIf='!feedBusca'>
-        <div *ngFor='let postagem of listaPostagem | orderBy : key:reverse' class="card bg-light my-5">
+    <div class="dropdown mobile mt-3 mb-n3">
+      <a role="button" class="btn rounded-circle fs-lg acoes-mobile d-flex align-items-center justify-content-center" type="button" id="dropdownMenuMobile" data-bs-toggle="dropdown" aria-expanded="false">
+        +
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuMobile">
+        <li><a class="dropdown-item"(click)='getPostagens()'>Todas as postagens</a></li>
+        <li><a class="dropdown-item"(click)='getPostagensByUsuario()'>Minhas
+          postagens</a></li>
+        <li><a class="dropdown-item" data-bs-toggle="modal"
+          data-bs-target="#novaPostagem">Nova postagem</a></li>
+      </ul>
+    </div>
+
+    <!-- todo Col que contém as postagens -->
+
+    <div class="col-lg-6 col-md-8 col-sm-12">
+      <div class="container mb-5 mt-3" id="postagens" *ngIf='!feedBusca'>
+        <div *ngFor='let postagem of listaPostagem | orderBy : key:reverse' class="card bg-light mb-5">
           <div class="card-header d-flex py-2">
             <div class="p-0">
-              <img class="rounded-circle img-size-user me-2" src="{{postagem.usuario.foto}}" alt="Foto do autor do post">
+              <img class="rounded-circle img-size-user me-2" src="{{postagem.usuario.foto}}"
+                alt="Foto do autor do post">
             </div>
             <div class="row">
               <p class="mt-auto mb-0 fs-12">{{postagem.usuario.nome}}</p>
@@ -35,8 +55,7 @@
           <div class="card-body d-flex flex-column">
             <p class="m-0 p-0 text-muted"><em>Tema: {{postagem.tema.tema}}</em></p>
             <img class="mx-auto my-2" style="max-width: 85%; max-height
-            :400px;" *ngIf='postagem.multimidia != null'
-              src="{{postagem.multimidia}}" alt="Foto de postagem">
+            :400px;" *ngIf='postagem.multimidia != null' src="{{postagem.multimidia}}" alt="Foto de postagem">
             <p class="card-text my-2 w-75 mx-auto">{{postagem.corpo}}</p>
             <div class="hashtags text-end my-2">{{postagem.hashtags}}
             </div>
@@ -48,14 +67,16 @@
             </a>
             <p class="ms-3"><strong>{{postagem.curtidas}}</strong> palminhas</p>
             <a *ngIf='postagem.usuario.id == usuario.id' (click)='getByIdPostagens(postagem.id)'
-              class="editar ms-auto py-2" data-bs-toggle="modal"
-              data-bs-target="#editarPostagem">Editar</a>
+              class="editar ms-auto py-2" data-bs-toggle="modal" data-bs-target="#editarPostagem">Editar</a>
           </div>
         </div>
       </div>
 
 
-      <!-- <div class="container mb-5 mt-5" id="postagens" *ngIf='feedBusca'>
+      <!--
+        Tentantiva de pesquisa por tema
+
+        <div class="container mb-5 mt-5" id="postagens" *ngIf='feedBusca'>
       <div class="card-columns" *ngFor='let tema of listaTema'>
         <div class="card mt-3 me-3" *ngFor='let postagem of tema.postagens | orderBy : key : reverse'>
           <div class="card-header d-flex py-2 arredondada-header">
@@ -187,12 +208,14 @@
               <option *ngFor='let tema of listaTema' value="{{tema.id}}">{{tema.tema}}</option>
             </select>
           </div>
-          <a data-bs-toggle="modal" data-bs-target="#apagarPostagem" data-bs-dismiss="modal" class="mb-3">Deseja apagar esta postagem?</a>
+          <a data-bs-toggle="modal" data-bs-target="#apagarPostagem" data-bs-dismiss="modal" class="mb-3">Deseja apagar
+            esta postagem?</a>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)='atualizarPostagem(postagemEdit.id)'>Salvar alterações</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary"
+          (click)='atualizarPostagem(postagemEdit.id)'>Salvar alterações</button>
       </div>
     </div>
   </div>
