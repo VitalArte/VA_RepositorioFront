@@ -2,7 +2,7 @@ html,
 body,
 header,
 #background{
-    background-image: url("../../assets/imagens/background2.jpg");
+    background-image: url("../../assets/imagens/bannerbackground.png");
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh
