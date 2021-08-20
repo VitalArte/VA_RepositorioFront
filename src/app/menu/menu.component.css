@@ -44,5 +44,7 @@ li a {
     
   }
 
-
+  a > .icones-menu:hover{
+      color: #1ee990 !important;
+  }
 }
