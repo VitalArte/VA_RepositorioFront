@@ -47,6 +47,10 @@ a.btn-nome:hover {
 
 }
 
+a .fa-pencil:hover{
+  color: #1ee990 !important;
+}
+
 @media(max-width: 440px) {
   .desktop {
     display: none !important;
