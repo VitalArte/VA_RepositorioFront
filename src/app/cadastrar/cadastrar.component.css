@@ -76,7 +76,7 @@
     color: #263238;
     background-color: #FFFFFF;
     width: 53%;
-    font-weight:500;
+    font-weight: bold;
   }
 
   #logar:hover {
@@ -85,6 +85,11 @@
 
   h1 {
     margin-top: 5vh;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-weight: bold;
   }
 
   a {
