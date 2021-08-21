@@ -1,48 +1,39 @@
-<div class= "d-flex position-relative overflow-hidden">
-<div class="container-fluid me-0 ms-0 p-0 mt-0 mb-0 vw-100 vh-100">
-  <img src="../../assets/imagens/cadastrofundo.svg">
+<div class= "container-fluid d-flex fundo">
+<div class="me-0 ms-0 p-0 mt-0 vw-100 vh-100">
   <div class="container-fluid">
-<div class="caixa">
+<div class="caixa" id= "caixa">
 
   <div class="container-fluid">
-    <div class="col-md-12">
+    <div>
       <div class="form">
         <div class="row">
           <h2 class="mb-4 mt-3 text-center">Cadastro</h2>
 
           <!-- Nome -->
           <div class="input-group col-lg-6 mb-4">
-            <div class="input-group-prepend">
-            </div>
             <input [(ngModel)]='usuario.nome' id="nome" type="text" name="name" placeholder="Nome"
               class="form-control">
           </div>
 
           <!-- Email -->
           <div class="input-group col-lg-6 mb-4">
-            <div class="input-group-prepend">
-            </div>
             <input [(ngModel)]='usuario.email' id="email" type="email" name="email" placeholder="Email"
               class="form-control">
           </div>
 
           <!-- Link da Foto -->
-          <div class="input-group col-lg-12 mb-4">
-            <div class="input-group-prepend">
-            </div>
+          <div class="input-group col-lg-12 col-lg-6 mb-4">
             <input id="foto" type="text" name="foto" placeholder="Link da sua foto (Opcional)" class="form-control">
           </div>
 
           <!-- Biografia -->
-          <div class="input-group col-lg-12 mb-4">
+          <div class="input-group col-lg-12 col-lg-6 mb-4">
             <textarea [(ngModel)]='usuario.biografia' class="form-control" name="bio" id="bio" cols="50" rows="2"
               placeholder="Conte mais sobre você"></textarea>
           </div>
 
           <!-- Tipo de Conta -->
-          <div class="input-group col-lg-12 mb-4">
-            <div class="input-group-prepend">
-            </div>
+          <div class="input-group col-lg-12 col-lg-6 mb-4">
             <select (change)='tipoUsuario($event)' for="tipoUsuario" id="tipoUsuario" name="tipoUsuario"
               class="form-control custom-select">
               <option selected>Tipo de Conta</option>
@@ -55,24 +46,20 @@
 
           <!-- Senha -->
           <div class="input-group col-lg-6 mb-4">
-            <div class="input-group-prepend">
-            </div>
             <input (input)='confirmarSenha($event)' id="senha" type="password" name="senha" placeholder="Senha"
               class="form-control">
           </div>
 
           <!-- Confirmar a sua Senha -->
           <div class="input-group col-lg-6 mb-4">
-            <div class="input-group-prepend">
-            </div>
             <input [(ngModel)]='usuario.senha' id="confirmeSenha" type="password" name="confirmeSenha"
               placeholder="Confirme sua senha" class="form-control">
           </div>
 
           <!-- Criar conta -->
-          <div class="form-group col-lg-12 mx-auto mb-0">
-            <a (click)='cadastrar()' type="submit" class="btn btn-block py-2">
-              <span class="font-weight-bold">Criar a sua conta</span>
+          <div class="form-group">
+            <a (click)='cadastrar()' type="submit" class="btn py-2" id= "criar">
+              <span>Criar a sua conta</span>
             </a>
           </div>
         </div>
@@ -81,12 +68,12 @@
   </div>
 
   <div class="coluna"><div class="row conectar">
-    <a routerLink='/'>Voltar para o início</a>
+    <a id= "inicio" routerLink='/'>Voltar para o início</a>
     <h1>Conecte-se</h1>
-    <h4>Criar, expressar, compartilhar e valorizar.</h4>
     <div>
-      <a routerLink='/logar' type="submit" class="btn btn-block botao1 py-2" id="logar">
-        <span class="font-weight-bold">Faça Login</span>
+      <h4>Criar, expressar, compartilhar e valorizar.</h4>
+      <a routerLink='/logar' type="submit" class="btn py-2" id="logar">
+        <span>Faça Login</span>
       </a>
     </div>
   </div>
