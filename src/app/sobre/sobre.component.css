@@ -15,14 +15,15 @@
   color: black;
 }
 
-.fundo {
+/* .fundo {
 background-image: url('../../assets/imagens/fundoSobre.png');
 background-repeat: no-repeat;
 background-attachment: fixed;
-background-size: 75vw auto;
+background-size: 75vw auto; */
 /* position: sticky; */
-z-index: -3;
-}
+/* z-index: -3;
+overflow-x: hidden;
+} */
 
 .cartao {
   font-size: 0.9rem;
@@ -34,7 +35,7 @@ z-index: -3;
 }
 
 .tecnologias {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .icones-tec {

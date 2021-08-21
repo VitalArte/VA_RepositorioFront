@@ -1,10 +1,10 @@
-.cobrinha {
-  background-image: url('../../assets/imagens/cobrinhafundo.png');
-  object-fit: stretch;
-  background-repeat: no-repeat;
+.fundo-escuro {
+  background-color: #263238;
+
+  background-image: url('../../assets/imagens/fundofeed_op1.png');
+  background-repeat: repeat-x;
   background-attachment: fixed;
-  background-origin: -5 -5;
-  background-size: 100vw auto;
+  background-size: auto 100vh;
 }
 
 .img-size-user {
@@ -14,29 +14,30 @@
   padding: 0 !important;
 }
 
-.arredondada {
-  border-radius: 25px;
-}
-.arredondada-header {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-
 .sidenav-btn {
-  background-color: #263238;
+  background-color: #7B43CD;
+
+  width: 32vw;
+  max-width: 350px;
+
 }
 
-.newpost:hover {
+.sidenav-btn:hover {
   background-color: #1ee990;
-  color: #263238;
 }
 
 .fs-12 {
-  font-size: 0.8rem;
+  font-size: 1rem !important;
+}
+
+.borda-azul {
+  border-bottom: 1px solid #8836ff;
 }
 
 #postagens h5 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align:end;
 }
 
 #postagens p {
@@ -52,11 +53,71 @@ a {
   cursor: pointer;
 }
 
-.btn-azul {
-  background-color: #1e88e9;
+.editar {
+  color: #1e88e9;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
 
 }
 
 .data {
-  font-size: 0.2rem;
+  font-size: 0.8rem !important;
+}
+
+.mobile {
+  display: none;
+}
+
+.fs-lg {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+.acoes-mobile {
+  background-color: #7B43CD;
+  height: 50px;
+  width: 50px;
+  box-shadow: inset 0em 0em 10px rgba(0, 0, 0, 0.418);
+}
+
+
+@media(max-width: 440px){
+
+  .sidenav-btn {
+    display: none;
+  }
+
+  #postagens h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align:end;
+  }
+
+  .mobile {
+    display: inline;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .card-body p {
+    width: 95% !important;
+  }
+
+  .fundo-escuro {
+    background-color: #263238;
+
+    background-image: url('../../assets/imagens/fundofeed_op1.png');
+    background-attachment: fixed;
+    background-size: auto 100vh;
+    background-position: bottom right;
+  }
+
+
 }

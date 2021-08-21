@@ -1,5 +1,10 @@
 @import '~animate.css/animate.min';
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,700&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
 
 /*Configuração do espaçamento da navbar*/
 
@@ -99,3 +104,29 @@
   width: 57%;
 }
 
+/* Animação do logo*/
+.navbar-brand:hover{
+  -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+}
+
+
+/*Personalização da barra de rolagem*/
+::-webkit-scrollbar{
+  width: 15px;
+  background: black;
+  
+}
+
+::-webkit-scrollbar-track{
+  background-color:whitesmoke;
+  border-radius: 30px;
+  
+}
+
+::-webkit-scrollbar-thumb{
+  background-color:black;
+  border-radius: 10px;
+}

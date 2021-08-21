@@ -2,12 +2,13 @@
 
 .icones-menu{
     font-size: 30px;
-    color: #8836ff
+    color: #8836ff;
+    cursor: pointer;
 }
 
-.fundo-claro{
-    background-color: rgba(255, 255, 255, 0.438);
-
+.fundo-dark{
+    background-color: #263238;
+    border-bottom: 2px solid #8836ff;
 }
 
 .btn-outline-dark{
@@ -16,4 +17,39 @@
 
 li a {
     color: #8836ff;
+    cursor: pointer;
+}
+
+a > .icones-menu:hover{
+  color: #1ee990 !important;
+}
+
+li a:hover{
+  color: #1ee990 !important;
+}
+
+.mobile{
+  display: none;
+}
+
+@media(max-width: 450px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block !important;
+    height: 50px;
+  }
+
+  .img-usuario {
+    border: 2px solid #8836ff !important;
+  }
+
+  .icones-menu{
+    font-size: 20pt;
+    color: #8836ff;
+    
+  }
+
 }
