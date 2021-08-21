@@ -1,31 +1,33 @@
 .fundo {
-  display: flex;
-  position: relative;
+  background-color: #8836FF;
+  width: 100%;
+  height: 100%;
 }
 
 .caixa {
   position: absolute;
   display: flex;
-  width: 936px;
-  height: 600px;
-  top: 30px;
-  left: 200px;
-  border-radius: 15px;
+  width: 70%;
+  height: 100%;
+  top: 5%;
+  bottom: 5%;
+  left: 15%;
+  border-radius: 5px;
   background-color: #FFFFFF;
   }
 
 .coluna {
   position: absolute;
   display: flex;
-  width: 350px;
-  height: 600px;
+  width: 37%;
+  height: 100%;
   margin-right: 140vh;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #263238;
   }
 
    .row {
-    width: 400px;
+    width: 67vh;
     margin-top: 0px;
     margin-left: 45%;
     position: absolute;
@@ -57,23 +59,28 @@
 
 
   .btn {
-    width: 378px;
+    width: 63vh;
     color:#FFFFFF;
     background-color:#263238;
+    float: left;
   }
 
   .conectar {
   margin-top: 5vh;
-  margin-left: 1%;
   color:#FFFFFF;
-  padding: 10%;
+  margin-left: 10%;
   }
 
   #logar {
     margin-top: 178px;
     color: #263238;
     background-color: #FFFFFF;
-    width: 215px;
+    width: 53%;
+    font-weight:500;
+  }
+
+  #logar:hover {
+    background-color: #1ee990;
   }
 
   h1 {
@@ -82,4 +89,21 @@
 
   a {
     color:#FFFFFF;
+  }
+
+  h4 {
+    width: 55%;
+  }
+
+  #inicio {
+    text-decoration: none;
+  }
+
+  #inicio:hover {
+    color:  #1ee990;
+  }
+
+  .form-control:focus {
+    border-color: #8636ffcb;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #9f5fffcc;
   }
