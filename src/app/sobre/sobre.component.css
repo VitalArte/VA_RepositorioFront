@@ -1,10 +1,15 @@
 .icones-social {
   font-size: 1.6rem;
-  color: blueviolet !important;
+  color: #1e88e9 !important;
+}
+
+.fundo-escuro {
+  background-color: #263238;
+
 }
 
 .icones-social:hover {
-  color: rgba(137, 43, 226, 0.383) !important;
+  color: #97c4ee !important;
 }
 
 .legenda {
@@ -16,32 +21,26 @@
 }
 
 .fundo {
-background-image: url('../../assets/imagens/fundoSobre.png');
+background-image: url('../../assets/imagens/FundoSobre_ondinhas.svg');
 background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: 75vw auto;
+background-size: 100vw auto;
 /* position: sticky; */
-z-index: -3;
 overflow-x: hidden;
+
+}
+
+h1 {
+  font-weight: 700;
 }
 
 .cartao {
   font-size: 0.9rem;
-
 }
 
-.tecnologias ul {
-  list-style: none;
-}
 
-.tecnologias {
-  font-size: 1.6rem;
+.fundo-verde {
+  background-color: #1ee990;
 }
-
-.icones-tec {
-  font-size: 3rem;
-}
-
 
 .wrap-image {
   position: relative;
@@ -72,22 +71,18 @@ overflow-x: hidden;
 }
 
 .wrap-image:hover::before {
-  top: 22px;
-  left: 30px;
+  top: 12px;
+  left: 20px;
 }
 
 .wrap-image:hover::after {
-  bottom: 22px;
-  right: 30px;
+  bottom: 12px;
+  right: 20px;
 }
 
 .w-90 {
   width: 90%;
 }
-
-/* #sobre {
-  transition: 300ms;
-} */
 
 
 /* .ativo {
