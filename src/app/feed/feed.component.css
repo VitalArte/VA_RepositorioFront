@@ -1,6 +1,10 @@
 .fundo-escuro {
   background-color: #263238;
 
+  background-image: url('../../assets/imagens/fundofeed_op1.png');
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: auto 100vh;
 }
 
 .img-size-user {
@@ -104,6 +108,15 @@ a {
 
   .card-body p {
     width: 95% !important;
+  }
+
+  .fundo-escuro {
+    background-color: #263238;
+
+    background-image: url('../../assets/imagens/fundofeed_op1.png');
+    background-attachment: fixed;
+    background-size: auto 100vh;
+    background-position: bottom right;
   }
 
 
