@@ -8,9 +8,8 @@
   position: absolute;
   display: flex;
   width: 70%;
-  height: 100%;
-  top: 5%;
-  bottom: 5%;
+  height: 90%;
+  top: 2%;
   left: 15%;
   border-radius: 5px;
   background-color: #FFFFFF;
@@ -29,7 +28,7 @@
    .row {
     width: 67vh;
     margin-top: 0px;
-    margin-left: 45%;
+    margin-left: 42%;
     position: absolute;
     display: flex;
     justify-content: center;
