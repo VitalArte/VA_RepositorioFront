@@ -23,7 +23,7 @@
 .fundo {
 background-image: url('../../assets/imagens/FundoSobre_ondinhas.svg');
 background-repeat: no-repeat;
-background-size: 100vw auto;
+background-size: 100vw;
 /* position: sticky; */
 overflow-x: hidden;
 
