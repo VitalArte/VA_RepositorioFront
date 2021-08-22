@@ -21,8 +21,8 @@
 
    .row {
     width: 67vh;
-    margin-top: 0px;
-    margin-left: 42%;
+    margin-top: 10vh;
+    margin-left: 45%;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -57,16 +57,21 @@
     color: #ffffff;
     background-color: #263238;
     width: 53%;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   #cadastro:hover {
     background-color: #fcf647;
     color:#263238;
+    font-weight: 500;
   }
 
   h1 {
     margin-top: 5vh;
+    font-weight: bold;
+  }
+
+  h2 {
     font-weight: bold;
   }
 
