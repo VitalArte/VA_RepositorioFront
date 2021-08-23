@@ -90,6 +90,10 @@ a {
   box-shadow: inset 0em 0em 10px rgba(0, 0, 0, 0.418);
 }
 
+.w-85 {
+  width: 85%
+}
+
 
 @media(max-width: 440px){
 
