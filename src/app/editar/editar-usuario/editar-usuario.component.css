@@ -1,0 +1,101 @@
+.fundo {
+  background-color: #263238;
+  width: 100%;
+  height: 100%;
+}
+
+.caixa {
+  position: absolute;
+  display: flex;
+  width: 70%;
+  height: 95%;
+  top: 18%;
+  left: 15%;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  }
+
+  .coluna {
+    background-image: url(../../../assets/imagens/fridaarteeditar.jpg);
+    background-size:cover;
+    background-position-x: 99%;
+    position: absolute;
+    display: flex;
+    width: 37%;
+    height: 100%;
+    border-radius: 5px;
+    }
+
+  .row {
+    width: 50%;
+    margin-top: 0;
+    margin-left: 42%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-self:auto;
+  }
+
+  input {
+    border-color: #263238;
+  }
+
+  input::placeholder {
+    color:#263238;
+  }
+
+  select {
+    color:#263238;
+    border-color: #263238;
+  }
+
+  textarea {
+    border-color: #263238;
+  }
+
+  textarea::placeholder {
+    color:#263238;
+  }
+
+
+  .btn {
+    width: 49%;
+    color:#FFFFFF;
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+
+  #atualizar {
+    background-color: #3911c1;
+    font-weight: normal;
+  }
+
+  #cancelar {
+    background-color: #263238;
+    font-weight: normal;
+  }
+  #cancelar:hover {
+    background-color: #8836ff;
+    font-weight: normal;
+  }
+
+  #feed {
+    text-decoration: none;
+    color:#FFFFFF;
+  }
+
+  #feed:hover {
+    color:  #1ee990;
+  }
+
+  .form-control:focus {
+    border-color: #8636ffcb;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #9f5fffcc;
+  }
+
+  p {
+    color: #FFFFFF;
+    font-size: 11px;
+  }

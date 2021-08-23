@@ -3,9 +3,21 @@
   padding: 0;
 }
 
+footer {
+  background-color: #13191d;
+}
+
 li{
   list-style: none;
   display: inline;
   margin: 0;
   padding: 5px;
+}
+
+.github {
+  filter: invert(99%) sepia(16%) saturate(0%) hue-rotate(228deg) brightness(112%) contrast(100%);
+}
+
+.github:hover {
+filter: invert(43%) sepia(78%) saturate(7438%) hue-rotate(254deg) brightness(102%) contrast(111%);
 }
