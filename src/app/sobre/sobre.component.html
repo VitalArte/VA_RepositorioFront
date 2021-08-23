@@ -16,8 +16,8 @@
 
       <!-- Sobre o projeto -->
       <div class="row d-flex justify-content-center mb-5">
-        <div class="col-6 p-3 text-justify align-self-center">
-          <p>A VitalArte surgiu com o intuito de ajudar a comunidade de artistas independentes do Brasil, que atualmente
+        <div class="col-6 p-3 text-justify align-self-center ">
+          <p class="text-start">A VitalArte surgiu com o intuito de ajudar a comunidade de artistas independentes do Brasil, que atualmente
             está enfrentando um grande problema para conseguir sobreviver do seu trabalho. O algoritmo das redes sociais
             mais usadas para a divulgação de trabalhos artísticos vive em constante mudança e acaba atrapalhando o
             trabalho desses artistas. Além disso, o meio artístico está extremamente elitizado e o trabalho de artistas
@@ -49,162 +49,134 @@
     <h1 class="text-center mb-5 py-2 fundo-verde">Sobre os desenvolvedores</h1>
   </div>
   <div class="w-90 mx-auto mb-5">
-    <div class="row  d-flex justify-content-center align-items-baseline">
+  <div class="row  d-flex justify-content-center align-items-baseline">
 
-      <!-- Vini Teixeira -->
-      <div (mouseover)="toggleVini()" (mouseout)="toggleVini()" class="col px-2  mx-1 cartao fundo-escuro">
-        <div class="wrap-image">
-          <div class="p-2">
-            <div class="text-center">
-              <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_ViniPNG.png" alt="">
-            </div>
-            <hr class="w-75 mx-auto">
-            <p class="m-0 text-white">Vinícius Teixeira</p>
-            <div *ngIf='!estaAbertoV' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
-              <i class="fa fa-angle-double-down text-secondary"></i>
-            </div>
-            <p [@mostrar]="estaAbertoV ? 'aberto' : 'fechado'" class="text-center animate__animated mt-2 text-white"
-              id="sobreVini">
-              Lorem ipsum dolor sit
-              amet
-              consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
-              explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
-              quidem quae ut cupiditate obcaecati in id explicabo. Consequatur odit voluptatem dignissimos
-              exercitationem voluptatum!</p>
-            <div class="text-center">
-              <a href="" target="_blank"><i class="fa fa-github-alt icones-social pe-5" aria-hidden="true"></i>
-              </a>
-              <a href="" target="_blank"><i class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
-              </a>
-            </div>
+    <!-- Vini Teixeira -->
+    <div (mouseover)="toggleVini()" (mouseout)="toggleVini()" class="col px-2  mx-1 cartao fundo-escuro">
+      <div class="wrap-image">
+        <div class="p-2">
+          <div class="text-center">
+            <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_ViniPNG.png" alt="">
+          </div>
+          <hr class="w-75 mx-auto">
+          <p class="text-center m-0 text-white">Vinícius Teixeira</p>
+          <div *ngIf='!estaAbertoV' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+            <i class="fa fa-angle-double-down text-secondary"></i>
+          </div>
+          <p [@mostrar]="estaAbertoV ? 'aberto' : 'fechado'" class="text-center animate__animated mt-2 text-white" id="sobreVini">
+            Lorem ipsum dolor sit
+            amet
+            consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
+            explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
+            quidem quae ut cupiditate obcaecati in id explicabo. Consequatur odit voluptatem dignissimos
+            exercitationem voluptatum!</p>
+          <div class="text-center">
+            <a href="" target="_blank"><i class="fa fa-github-alt icones-social pe-5" aria-hidden="true"></i>
+            </a>
+            <a href="" target="_blank"><i class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
-      <!-- /Vini Teixeira -->
+    </div>
+    <!-- /Vini Teixeira -->
 
-      <!-- Ícaro Garcez -->
-      <div (mouseover)="toggleIcaro()" (mouseout)="toggleIcaro()" class="col px-2 mx-1 cartao fundo-escuro">
-        <div class="wrap-image">
-          <div class="p-2">
-            <div class="text-center">
-              <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_IcaroPNG.png" alt="">
-            </div>
-            <hr class="w-75 mx-auto">
-            <p class="m-0 text-white">Ícaro Garcez</p>
-            <div *ngIf='!estaAbertoI' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
-              <i class="fa fa-angle-double-down text-secondary"></i>
-            </div>
-            <p [@mostrar]="estaAbertoI ? 'aberto' : 'fechado'" class="text-center mt-2 text-white" id="sobre">Lorem
-              ipsum dolor
-              sit
-              amet
-              consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
-              explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
-              quidem quae ut cupiditate obcaecati in id explicabo. Consequatur odit voluptatem dignissimos
-              exercitationem voluptatum!</p>
-            <div class="text-center">
-              <a href="" target="_blank"><i class="fa fa-github-alt icones-social pe-5" aria-hidden="true"></i>
-              </a>
-              <a href="" target="_blank"><i class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
-              </a>
-            </div>
+    <!-- Ícaro Garcez -->
+    <div (mouseover)="toggleIcaro()" (mouseout)="toggleIcaro()" class="col px-2 mx-1 cartao fundo-escuro">
+      <div class="wrap-image">
+        <div class="p-2">
+          <div class="text-center">
+            <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_IcaroPNG.png" alt="">
+          </div>
+          <hr class="w-75 mx-auto">
+          <p class="text-center m-0 text-white">Ícaro Garcez</p>
+          <div *ngIf='!estaAbertoI' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+            <i class="fa fa-angle-double-down text-secondary"></i>
+          </div>
+          <p [@mostrar]="estaAbertoI ? 'aberto' : 'fechado'" class="text-center mt-2 text-white" id="sobre">Com 21 anos, Ícaro descobriu na tecnologia um espaço que abrange tudo que ele deseja para sua carreira: dar vida às suas ideias mirabolantes, dar voz a sua ambição e alcançar e ajudar a sua comunidade transgênero. Anteriormente trabalhou na área de treinamento e desenvolvimento, mas somente ao iniciar sua formação como desenvolvedor web pôde formular um caminho para a sua vida profissional. Atualmente pretende se especializar como full-stack e seguir para o desenvolvimento mobile no futuro.
+          </p>
+          <div class="text-center">
+            <a href="https://github.com/icarogarcez" target="_blank"><i class="fa fa-github-alt icones-social pe-5" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/icarusgarcez" target="_blank"><i class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
-      <!-- /Ícaro Garcez -->
+    </div>
+    <!-- /Ícaro Garcez -->
 
-      <!-- Thana Rodrigues -->
-      <div (mouseover)="toggleThana()" (mouseout)="toggleThana()" class="col px-2  mx-1 cartao fundo-escuro">
-        <div class="wrap-image">
-          <div class="p-2">
-            <div class="text-center">
-              <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_ThanaPNG.png" alt="">
-            </div>
-            <hr class="w-75 mx-auto">
-            <p class="m-0 text-white">Thana Rodrigues</p>
-            <div *ngIf='!estaAbertoT' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
-              <i class="fa fa-angle-double-down text-secondary"></i>
-            </div>
-            <p [@mostrar]="estaAbertoT ? 'aberto' : 'fechado'" class="text-center mt-2 text-white" id="sobre">Lorem
-              ipsum dolor
-              sit
-              amet
-              consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
-              explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
-              quidem quae ut cupiditate obcaecati in id explicabo. Consequatur odit voluptatem dignissimos
-              exercitationem voluptatum!</p>
-            <div class="text-center">
-              <a href="" target="_blank"><i class="fa fa-github-alt icones-social pe-5" aria-hidden="true"></i>
-              </a>
-              <a href="" target="_blank"><i class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
-              </a>
-            </div>
+    <!-- Thana Rodrigues -->
+    <div (mouseover)="toggleThana()" (mouseout)="toggleThana()" class="col px-2  mx-1 cartao fundo-escuro">
+      <div class="wrap-image">
+        <div class="p-2">
+          <div class="text-center">
+            <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_ThanaPNG.png" alt="">
+          </div>
+          <hr class="w-75 mx-auto">
+          <p class="text-center m-0 text-white">Thana Rodrigues</p>
+          <div *ngIf='!estaAbertoT' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+            <i class="fa fa-angle-double-down text-secondary"></i>
+          </div>
+          <p [@mostrar]="estaAbertoT ? 'aberto' : 'fechado'" class="text-center mt-2 text-white" id="sobre">Thana possui 20 anos e mora na zona sul de São Paulo. Teve sua primeira experiência no mercado de trabalho como jovem aprendiz na área administrativa, durante este período ela conseguiu desenvolver suas habilidades de organização e trabalho em equipe. Atualmente está em transição de carreira, ela ama aprender coisas novas e está se aventurando na área da tecnologia, que sempre despertou sua curiosidade! Durante o Bootcamp da Generation teve o seu primeiro contato com a programação.</p>
+          <div class="text-center">
+            <a href="https://github.com/strangerthana" target="_blank"><i class="fa fa-github-alt icones-social pe-5" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/thanailde-rodrigues0707/" target="_blank"><i class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
-      <!-- /Thana Rodrigues -->
+    </div>
+    <!-- /Thana Rodrigues -->
 
 
-      <!-- Ana Oliveira -->
-      <div (mouseover)="toggleAna()" (mouseout)="toggleAna()" class="col px-2 mx-1 cartao fundo-escuro">
-        <div class="wrap-image">
-          <div class="p-2">
-            <div class="text-center">
-              <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_AnaPNG.png" alt="">
-            </div>
-            <hr class="w-75 mx-auto">
-            <p class="m-0 text-white">Ana Oliveira</p>
-            <div *ngIf='!estaAbertoA' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
-              <i class="fa fa-angle-double-down text-secondary"></i>
-            </div>
-            <p [@mostrar]="estaAbertoA ? 'aberto' : 'fechado'" class="text-center mt-2 text-white" id="sobre">Apaixonada
-              por
-              resolver problemas, Ana se sentiu atraída pela área da tecnologia depois de uma passagem pelo Audiovisual,
-              onde trabalhava com gerenciamento de equipes e orçamento e logística de filmagem. Desenvolveu na área
-              anterior sua comunicação e senso de organização, o qual ajudou na articulação do grupo. Na programação,
-              gosta muito de desenvolver as ideias em equipe e tem afinidade com a parte de lógica e back-end, mas tem
-              orgulho da sua atuação full-stack no projeto. Adora aprender e está ansiosa para aprofundar seus
-              conhecimentos em diversas linguagens!
+    <!-- Ana Oliveira -->
+    <div (mouseover)="toggleAna()" (mouseout)="toggleAna()" class="col px-2 mx-1 cartao fundo-escuro">
+      <div class="wrap-image">
+        <div class="p-2">
+          <div class="text-center">
+            <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_AnaPNG.png" alt="">
+          </div>
+          <hr class="w-75 mx-auto">
+          <p class=" text-center m-0 text-white">Ana Oliveira</p>
+          <div *ngIf='!estaAbertoA' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+            <i class="fa fa-angle-double-down text-secondary"></i>
+          </div>
+          <p [@mostrar]="estaAbertoA ? 'aberto' : 'fechado'" class="text-center mt-2 text-white" id="sobre">Apaixonada por resolver problemas, Ana se sentiu atraída pela área da tecnologia depois de uma passagem pelo mundo do Audiovisual, onde trabalhava com produção, gerenciando equipes e planejando a logística de filmagens. Lá, desenvolveu sua comunicação e organização, essenciais no trabalho em grupo. Na programação, gosta muito de desenvolver ideias em equipe e tem afinidade com back-end e atuação full-stack. Adora aprender e está ansiosa para conhecer mais e aprofundar seus conhecimentos na tecnologia.
+          </p>
+          <div class="text-center">
+            <a href="https://github.com/anaolisilva" target="_blank"><i class="fa fa-github-alt icones-social pe-5"
+                aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anaolisilva/" target="_blank"><i
+                class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Ana Oliveira -->
+
+    <!-- Leandro Souza -->
+    <div (mouseover)="toggleLe()" (mouseout)="toggleLe()" class="col px-2 mx-1 cartao fundo-escuro">
+      <div class="wrap-image">
+        <div class="p-2">
+          <div class="text-center">
+            <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_LeandroPNG.png" alt="">
+          </div>
+          <hr class="w-75 mx-auto">
+          <p class="text-center m-0 text-white">Leandro Souza</p>
+          <div *ngIf='!estaAbertoL' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
+            <i class="fa fa-angle-double-down text-secondary"></i>
+          </div>
+          <p [@mostrar]="estaAbertoL ? 'aberto' : 'fechado'" class="text-center mt-2 text-white" id="sobre">Leandro possui 20 anos, nasceu e cresceu na zona sul de São Paulo, mais especificamente em Diadema. Trabalhou 5 anos como artista freelancer com ilustração digital e design, e sempre teve interesse por interfaces visuais e tecnologia, atualmente transicionando de áreas. Anteriormente, em um fundo de cena, já havia lecionado filosofia budista para crianças. Durante o Bootcamp da Generation descobriu que é ainda mais apaixonado por criar e trazer vida à projetos , e seu maior foco agora é poder trazer seus conhecimentos e arte ao mundo da programação.
             </p>
-            <div class="text-center">
-              <a href="https://github.com/anaolisilva" target="_blank"><i class="fa fa-github-alt icones-social pe-5"
-                  aria-hidden="true"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/anaolisilva/" target="_blank"><i
-                  class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /Ana Oliveira -->
-
-      <!-- Leandro Souza -->
-      <div (mouseover)="toggleLe()" (mouseout)="toggleLe()" class="col px-2 mx-1 cartao fundo-escuro">
-        <div class="wrap-image">
-          <div class="p-2">
-            <div class="text-center">
-              <img class="rounded-circle img-fluid w-75" src="../../assets/imagens/avatar_LeandroPNG.png" alt="">
-            </div>
-            <hr class="w-75 mx-auto">
-            <p class="m-0 text-white">Leandro Souza</p>
-            <div *ngIf='!estaAbertoL' class="text-center fs-1-8rem animate__animated animate__flash animate__infinite">
-              <i class="fa fa-angle-double-down text-secondary"></i>
-            </div>
-            <p [@mostrar]="estaAbertoL ? 'aberto' : 'fechado'" class="text-center mt-2 text-white" id="sobre">Lorem
-              ipsum dolor
-              sit
-              amet
-              consectetur adipisicing elit. Ut maiores dignissimos sed quisquam ipsum, corporis mollitia impedit quos
-              explicabo excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sint consequatur
-              quidem quae ut cupiditate obcaecati in id explicabo. Consequatur odit voluptatem dignissimos
-              exercitationem voluptatum!</p>
-            <div class="text-center">
-              <a href="" target="_blank"><i class="fa fa-github-alt icones-social pe-5" aria-hidden="true"></i>
-              </a>
-              <a href="" target="_blank"><i class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
-              </a>
-            </div>
+          <div class="text-center">
+            <a href="https://github.com/leandrodesouza25" target="_blank"><i class="fa fa-github-alt icones-social pe-5" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/leandro-de-souza-25100000" target="_blank"><i class="fa fa-linkedin-square icones-social" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
