@@ -1,14 +1,17 @@
 <div class="container-fluid fundo-escuro">
 
   <!-- <div class="row desktop">
-    <form class="col-6 mt-2 ms-auto">
-      <input name="nomeUser" [(ngModel)]='nomeUsuario' (keyup)='getPostagensByUsuarioNome()'
-        class="form-control w-75 mb-n3" type="search" placeholder="Pesquise por nome de usuário" aria-label="Search">
-    </form>
+
   </div> -->
 
   <div class="row">
     <div class="col-4 mt-5 desktop">
+      <!-- Barra de Pesquisa -->
+      <form class="mt-2 me-4 d-flex justify-content-end">
+        <input name="nomeUser" [(ngModel)]='nomeUsuario' (keyup)='getPostagensByUsuarioNome()'
+          class="form-control barra-pesquisa" type="search" placeholder="Pesquise por nome de usuário" aria-label="Search">
+      </form>
+      <!-- /Barra de Pesquisa -->
       <app-barrauser></app-barrauser>
       <div class="container d-flex flex-column-reverse align-items-end">
         <a class="btn rounded-0 sidenav-btn text-white" data-bs-toggle="modal"

@@ -22,6 +22,11 @@
 
 }
 
+.barra-pesquisa {
+  width: 32vw;
+  max-width: 350px;
+}
+
 .sidenav-btn:hover {
   background-color: #1ee990;
 }
