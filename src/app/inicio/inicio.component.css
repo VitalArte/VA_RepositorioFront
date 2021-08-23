@@ -2,12 +2,25 @@ html,
 body,
 header,
 #background{
-    background-image: url("../../assets/imagens/bannerbackground.png");
-    background-position: center center;
+    background-image: url("../../assets/imagens/inicio_fundo.svg");
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    min-height: 100vh
+    background-color: #292929;
 }
 
+
+
+.slogan{
+   height: 400px;
+
+
+}
+@media (max-width: 700px){
+     .slogan{
+       height: 200px;
+     }
+
+}
 
 

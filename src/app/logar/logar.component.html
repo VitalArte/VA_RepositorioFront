@@ -1,27 +1,23 @@
-<div class= "d-flex position-relative overflow-hidden">
-  <div class="container-fluid me-0 ms-0 p-0 mt-0 mb-0 vw-100 vh-100">
-    <img src="../../assets/imagens/logarfundo.svg">
+<div class= "container-fluid d-flex">
+  <div class="me-0 ms-0 p-0 mt-0 vw-100 vh-100">
     <div class="container-fluid">
       <div class="caixa">
+
         <div class="container-fluid">
-          <div class="col-md-12">
+          <div>
             <div class="form">
               <div class="row">
 
-                <h2 class="mb-4 text-center text-white">Iniciar Sessão</h2>
+                <h2 class="mb-4 mt-3 text-center text-white">Iniciar Sessão</h2>
 
                 <!-- Email -->
-               <div class="input-group col-lg-6 mb-4">
-                  <div class="input-group-prepend">
-                  </div>
+               <div class="input-group col-lg-12 col-lg-6 mb-4">
                   <input [(ngModel)]='usuarioLogin.email' id="email" type="email" name="email" placeholder="Email"
                     class="form-control">
                 </div>
 
                 <!-- Senha -->
-                 <div class="input-group col-lg-6 mb-4">
-                  <div class="input-group-prepend">
-                  </div>
+                 <div class="input-group col-lg-12 col-lg-6 mb-4">
                   <input [(ngModel)]='usuarioLogin.senha' id="senha" type="password" name="senha" placeholder="Senha"
                     class="form-control">
                 </div>
@@ -32,21 +28,19 @@
                     <span class="font-weight-bold">Entrar</span>
                   </a>
                 </div>
-
-                <div class="coluna">
-                  <div class="row conectar">
-                    <a routerLink='/'>Voltar para o início</a>
-                    <h1>Conecte-se</h1>
-                    <h3 class= "col-md-9">Criar, expressar, compartilhar e valorizar.</h3>
-                    <div class="col-lg-12 mx-auto mb-0">
-                      <a routerLink="/cadastrar" type="submit" class="btn btn-block py-2" id="cadastro">
-                        <span class="font-weight-bold">Faça o cadastro</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="coluna">
+          <div class="row conectar">
+            <a id= "inicio" routerLink='/'>Voltar para o início</a>
+            <h1>Conecte-se</h1>
+            <div>
+              <h4>Olá, bem-vinde de volta.</h4>
+              <a routerLink="/cadastrar" type="submit" class="btn py-2" id="cadastro">
+                <span>Faça o cadastro</span>
+              </a>
             </div>
           </div>
         </div>
