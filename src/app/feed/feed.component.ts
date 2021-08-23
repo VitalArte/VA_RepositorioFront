@@ -37,6 +37,10 @@ export class FeedComponent implements OnInit {
   reverse = true
 
   ngOnInit() {
+    if (environment.token == '') {
+      alert('Sua sessão expirou, faça login novamente')
+      this.router.navigate(['/logar'])
+    }
 
     this.getPostagens()
     this.getAllTemas()
