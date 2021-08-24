@@ -45,7 +45,7 @@
       <div class="container mb-5 mt-3" id="postagens" *ngIf='!feedBusca'>
         <div *ngFor='let postagem of listaPostagem | orderBy : key:reverse' class="card bg-light mb-5">
           <div class="card-header d-flex py-2">
-            <div class="p-0">
+            <div class="p-0" *ngIf='postagem.usuario.foto != null'>
               <img class="rounded-circle img-size-user me-2" src="{{postagem.usuario.foto}}"
                 alt="Foto do autor do post">
             </div>
