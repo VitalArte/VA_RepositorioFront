@@ -3,7 +3,7 @@
   <div class="container-fluid">
 <div class="caixa" id= "caixa">
 
-  <div class="container-fluid">
+  <div class= "container-fluid">
     <div>
       <div class="form">
         <div class="row">
@@ -23,7 +23,7 @@
 
           <!-- Link da Foto -->
           <div class="input-group col-lg-12 col-lg-6 mb-4">
-            <input id="foto" type="text" name="foto" placeholder="Link da sua foto (Opcional)" class="form-control">
+            <input [(ngModel)]='usuario.foto' id="foto" type="text" name="foto" placeholder="Link da sua foto (Opcional)" class="form-control">
           </div>
 
           <!-- Biografia -->
@@ -58,7 +58,7 @@
 
           <!-- Criar conta -->
           <div class="form-group">
-            <a (click)='cadastrar()' type="submit" class="btn py-2" id= "criar">
+            <a (click)='cadastrar()' type="submit" class="btn py-2 form-control">
               <span>Criar a sua conta</span>
             </a>
           </div>
@@ -67,14 +67,16 @@
     </div>
   </div>
 
-  <div class="coluna"><div class="row conectar">
+  <div class="coluna"><div class="conectar">
     <a id= "inicio" routerLink='/'>Voltar para o início</a>
     <h1>Conecte-se</h1>
     <div>
       <h4>Criar, expressar, compartilhar e valorizar.</h4>
-      <a routerLink='/logar' type="submit" class="btn py-2" id="logar">
+      <div class="form-group">
+      <a routerLink='/logar' type="submit" class="btn py-2 form-control" id="logar">
         <span>Faça Login</span>
       </a>
+    </div>
     </div>
   </div>
 </div>

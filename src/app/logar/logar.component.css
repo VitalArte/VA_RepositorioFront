@@ -3,7 +3,7 @@
   display: flex;
   width: 70%;
   height: 65%;
-  top: 20%;
+  top: 15%;
   left: 15%;
   border-radius: 5px;
   background-color: #263238;
@@ -14,15 +14,14 @@
   display: flex;
   width: 37%;
   height: 100%;
-  margin-right: 140vh;
   border-radius: 5px;
   background-color: #8836ff;
   }
 
    .row {
-    width: 67vh;
-    margin-top: 10vh;
-    margin-left: 45%;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 42%;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -41,33 +40,33 @@
   }
 
   .btn {
-    width: 63vh;
+    width: 100%;
     color: #263238;
     background-color: #ffffff;
   }
 
   .conectar {
-    margin-top: 5vh;
+    margin-top: 10%;
     margin-left: 10%;
     color:#ffffff;
   }
 
   #cadastro {
-    margin-top: 15vh;
+    margin-top: 30%;
     color: #ffffff;
     background-color: #263238;
-    width: 53%;
-    font-weight: 500;
+    width: 75%;
+    font-weight: normal;
   }
 
   #cadastro:hover {
     background-color: #fcf647;
     color:#263238;
-    font-weight: 500;
+    font-weight: normal;
   }
 
   h1 {
-    margin-top: 5vh;
+    margin-top: 7%;
     font-weight: bold;
   }
 
@@ -80,7 +79,7 @@
   }
 
   h4 {
-    width: 55%;
+    width: 100%;
   }
 
   #inicio {

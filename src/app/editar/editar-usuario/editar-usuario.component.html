@@ -1,4 +1,74 @@
-<h1>
+<div class= "container-fluid d-flex fundo">
+  <div class="me-0 ms-0 p-0 mt-0 vw-100 vh-100">
+    <div class="container-fluid">
+      <div class="caixa" id= "caixa">
+        <div class= "container-fluid">
+          <div class="form">
+            <div class="row">
+              <h2 class="mb-4 mt-3 text-center">Atualizar o perfil</h2>
+
+              <!-- Nome -->
+          <div class="input-group col-lg-6 mb-4">
+            <input [(ngModel)]='usuario.nome' id="nome" type="text" name="name" placeholder="Nome"
+              class="form-control">
+          </div>
+
+          <!-- Email -->
+          <div class="input-group col-lg-6 mb-4">
+            <input [(ngModel)]='usuario.email' id="email" type="email" name="email" placeholder="Email"
+              class="form-control">
+          </div>
+
+          <!-- Link da Foto -->
+          <div class="input-group col-lg-12 col-lg-6 mb-4">
+            <input [(ngModel)]='usuario.foto' id="foto" type="text" name="foto" placeholder="Link da sua foto (Opcional)" class="form-control">
+          </div>
+
+          <!-- Biografia -->
+          <div class="input-group col-lg-12 col-lg-6 mb-4">
+            <textarea [(ngModel)]='usuario.biografia' class="form-control" name="bio" id="bio" cols="50" rows="2"
+              placeholder="Conte mais sobre você"></textarea>
+          </div>
+
+          <!-- Senha -->
+          <div class="input-group col-lg-6 mb-4">
+            <input (input)='confirmarSenha($event)' id="senha" type="password" name="senha" placeholder="Senha"
+              class="form-control">
+          </div>
+
+          <!-- Confirmar a sua Senha -->
+          <div class="input-group col-lg-6 mb-4">
+            <input [(ngModel)]='usuario.senha' id="confirmeSenha" type="password" name="confirmeSenha"
+              placeholder="Confirme sua senha" class="form-control">
+          </div>
+
+          <!-- Criar conta -->
+          <div class="form-group">
+            <a routerLink='/feed' type="submit" class="btn py-2 form-control me-2" id="cancelar">
+              <span>Cancelar</span>
+              </a>
+            <a (click)='atualizar()' type="submit" class="btn py-2 form-control" id= "atualizar">
+              <span>Atualizar</span>
+            </a>
+          </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="coluna">
+          <div class="div">
+            <p class= "ms-4 mt-4">
+              by: @yanliu on Figma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <h1>
   Atualizar o perfil
 </h1>
 <form>
@@ -30,4 +100,4 @@
       <button type="submit" class="btn btn-danger" routerLink='/' >Cancelar</button>
       <button (click)='atualizar()' type="submit" class="btn btn-success">Atualizar</button>
     </div>
-</form>
+</form> -->

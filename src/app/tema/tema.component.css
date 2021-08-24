@@ -1,3 +1,16 @@
 .borda-topo{
   border-top: 4px solid #3911c1;
 }
+
+.fundo-escuro {
+  background-color: #263238;
+}
+
+
+.fundo-verde {
+  background-color: #1ee990;
+}
+
+.text-color {
+  color: #8836ff
+}

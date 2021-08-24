@@ -16,21 +16,21 @@ export class TemaComponent implements OnInit {
   listaTemas: Tema[]
   temasNome: Tema[]
   temasTopico: Tema[]
-  temaEdit: Tema = new Tema ()
+  temaEdit: Tema = new Tema()
   tipoUsuario: string
 
   constructor(
-    private temaService: TemaService ,
+    private temaService: TemaService,
     private router: Router
   ) { }
 
-  ngOnInit(){
-  if(environment.token=='') {
-  alert('Sua sessão expirou, faça login novamente')
-  this.router.navigate(['/logar'])
-  }
+  ngOnInit() {
+    if (environment.token == '') {
+      alert('Sua sessão expirou, faça login novamente')
+      this.router.navigate(['/logar'])
+    }
 
-  this.tipoUsuario= environment.tipoConta
+    this.tipoUsuario = environment.tipoConta
 
     this.getAllTemas()
 
@@ -38,36 +38,36 @@ export class TemaComponent implements OnInit {
 
 
   getAllTemas() {
-     this.temaService.getAllTema().subscribe((resp: Tema[])=> {
-       this.listaTemas = resp
-     })
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
   }
 
   getByIdTema(id: number) {
-    this.temaService.getbyIdTema(id).subscribe((resp: Tema)=> {
+    this.temaService.getbyIdTema(id).subscribe((resp: Tema) => {
       this.temaEdit = resp
     })
- }
-
-  findNomeTema(nome: string){
-
-    this.temaService.getNomeTema(nome).subscribe((resp: Tema[])=>{
-    this.temasNome = resp
-
-    } )
-
-  }
-  findTopicoTema(topico: string){
-
-    this.temaService.getTopicoTema(topico).subscribe((resp: Tema[])=>{
-    this.temasTopico = resp
-
-    } )
-
   }
 
-   cadastrar(){
-    this.temaService.postTema(this.tema).subscribe((resp: Tema)=> {
+  findNomeTema(nome: string) {
+
+    this.temaService.getNomeTema(nome).subscribe((resp: Tema[]) => {
+      this.temasNome = resp
+
+    })
+
+  }
+  findTopicoTema(topico: string) {
+
+    this.temaService.getTopicoTema(topico).subscribe((resp: Tema[]) => {
+      this.temasTopico = resp
+
+    })
+
+  }
+
+  cadastrar() {
+    this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp
       alert('Tema cadastrado com sucesso!')
       console.log(this.tema)
@@ -76,15 +76,15 @@ export class TemaComponent implements OnInit {
 
 
     })
-   }
+  }
 
-   atualizarTema (id: number){
+  atualizarTema(id: number) {
     this.getByIdTema(id)
-    this.temaService.putTema(this.temaEdit).subscribe((resp: Tema)=> {
+    this.temaService.putTema(this.temaEdit).subscribe((resp: Tema) => {
       this.temaEdit = resp
-      alert ('Tema alterado com sucesso.')
+      alert('Tema alterado com sucesso.')
       this.getAllTemas()
       this.temaEdit = new Tema()
     })
-    }
+  }
 }
