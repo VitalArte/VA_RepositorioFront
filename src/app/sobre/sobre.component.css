@@ -132,3 +132,22 @@ a{
     width: 100%;
   }
 }
+
+.float-container {
+width: 100%;
+margin-left: 7%;
+}
+
+.float-child {
+  width: 23%;
+  float: left;
+  padding: 3%;
+}
+
+h4 {
+  margin-right: 38%;
+  text-align: center;
+  color: #000;
+}
+
+
